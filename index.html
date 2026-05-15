@@ -1,0 +1,1656 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Територія Жінки. Таємні файли — Музично-поетична формація</title>
+<meta name="description" content="Романтична музична комедія братів Капранових з живим звуком. Прем'єра 19 березня 2026. Найближчі покази 16 та 17 липня — Гідропарк, «Магічний Кораблик»." />
+<meta name="theme-color" content="#1A0F0A" />
+
+<!-- OG -->
+<meta property="og:type" content="event" />
+<meta property="og:title" content="Територія Жінки. Таємні файли" />
+<meta property="og:description" content="Романтична музична комедія братів Капранових. Київ, Гідропарк, Магічний Кораблик. 16 та 17 липня 2026." />
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TheaterEvent",
+  "name": "Територія Жінки. Таємні файли",
+  "startDate": "2026-07-16T19:00",
+  "location": { "@type": "Place", "name": "Магічний Кораблик", "address": "Гідропарк, Київ, Україна" },
+  "performer": { "@type": "PerformingGroup", "name": "Музично-поетична формація «Територія Жінки»" },
+  "offers": { "@type": "Offer", "url": "https://secure.wayforpay.com", "price": "800-1200", "priceCurrency": "UAH" }
+}
+</script>
+
+<!-- Fonts: Cyrillic-supporting -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,800&family=Playfair+Display:ital,wght@0,700;0,900;1,900&family=Caveat:wght@500;700&family=Allura&family=Manrope:wght@400;500;600;700&display=swap&subset=cyrillic,cyrillic-ext,latin" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: {
+    ink:'#1A0F0A', cream:'#F5E8D0', gold:'#C9A24C', 'gold-hot':'#E8B850',
+    wine:'#6E1A2F', peach:'#E8B89C', paper:'#EDE0C2', shadow:'#5C3A22'
+  },
+  fontFamily: {
+    display: ['"Bodoni Moda"','"Playfair Display"','Georgia','serif'],
+    body: ['"Manrope"','system-ui','sans-serif'],
+    script: ['"Allura"','"Caveat"','cursive'],
+    hand: ['"Caveat"','cursive']
+  }
+}}};
+</script>
+
+<style>
+:root{
+  --ink:#1A0F0A;
+  --ink-2:#2A1810;
+  --cream:#F5E8D0;
+  --gold:#C9A24C;
+  --gold-hot:#E8B850;
+  --wine:#6E1A2F;
+  --wine-deep:#4A0F22;
+  --peach:#E8B89C;
+  --paper:#EDE0C2;
+  --shadow:#5C3A22;
+  --hot:#E94E3D;
+  --hot-deep:#C8253A;
+}
+*{ -webkit-font-smoothing:antialiased; }
+html{ scroll-behavior:smooth; background:var(--ink); }
+html.no-smooth{ scroll-behavior:auto; }
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Manrope',system-ui,sans-serif;
+  font-size:17px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+::selection{ background:var(--wine); color:var(--cream); }
+
+/* === GLOBAL PAPER GRAIN === */
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:60;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.10  0 0 0 0 0.06  0 0 0 0 0.03  0 0 0 0.55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity:.42; mix-blend-mode:multiply;
+}
+
+/* paper texture util */
+.paper-bg{ background:var(--paper); position:relative; }
+.cream-bg{ background:var(--cream); position:relative; }
+.ink-bg{ background:var(--ink); color:var(--cream); position:relative; }
+.wine-bg{ background:var(--wine); color:var(--cream); position:relative; }
+
+/* vignette */
+.vignette::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background: radial-gradient(120% 80% at 50% 40%, transparent 40%, rgba(26,15,10,.35) 100%);
+}
+
+/* === TYPE === */
+.display{ font-family:'Bodoni Moda','Playfair Display',serif; font-weight:800; letter-spacing:-.025em; line-height:.9; }
+.display-italic{ font-family:'Bodoni Moda',serif; font-style:italic; font-weight:400; }
+.script{ font-family:'Allura','Caveat',cursive; font-weight:400; }
+.hand{ font-family:'Caveat',cursive; font-weight:500; }
+.eyebrow{ font-family:'Manrope',sans-serif; font-weight:600; font-size:11px; letter-spacing:.28em; text-transform:uppercase; }
+.num{ font-family:'Bodoni Moda',serif; font-weight:900; font-feature-settings:'lnum','tnum'; }
+
+/* === BUTTONS === */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+  padding: 16px 28px; border-radius:999px;
+  font-family:'Manrope',sans-serif; font-weight:700; font-size:13px;
+  letter-spacing:.16em; text-transform:uppercase;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1), background .25s ease, color .25s ease, box-shadow .35s ease, border-color .25s ease;
+  min-height:48px; cursor:pointer; border:0;
+  position:relative; overflow:hidden; isolation:isolate;
+}
+.btn > *{ position:relative; z-index:2; }
+
+/* shimmer sweep — shared */
+.btn::before{
+  content:""; position:absolute; inset:0; z-index:1;
+  background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,.55) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform .9s cubic-bezier(.3,.7,.2,1);
+  pointer-events:none;
+}
+.btn:hover::before{ transform: translateX(120%); }
+.btn:active{ transform: translateY(0) scale(.97); }
+
+/* GOLD — primary, juicy */
+.btn-gold{
+  color:var(--ink);
+  background:
+    linear-gradient(135deg, #F4D27A 0%, #E8B850 45%, #C9892C 100%);
+  background-size: 180% 180%;
+  background-position: 0% 0%;
+  box-shadow:
+    0 14px 28px -10px rgba(232,184,80,.65),
+    0 4px 12px -2px rgba(110,26,47,.22),
+    inset 0 1px 0 rgba(255,255,255,.55),
+    inset 0 -2px 0 rgba(110,26,47,.18);
+  animation: btnGoldPulse 3.6s ease-in-out infinite;
+}
+.btn-gold:hover{
+  background-position: 100% 100%;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+    0 24px 42px -10px rgba(232,184,80,.85),
+    0 8px 18px -2px rgba(110,26,47,.3),
+    inset 0 1px 0 rgba(255,255,255,.6),
+    inset 0 -2px 0 rgba(110,26,47,.2);
+}
+@keyframes btnGoldPulse{
+  0%,100%{ box-shadow: 0 14px 28px -10px rgba(232,184,80,.55), 0 4px 12px -2px rgba(110,26,47,.22), inset 0 1px 0 rgba(255,255,255,.55), inset 0 -2px 0 rgba(110,26,47,.18); }
+  50%{    box-shadow: 0 18px 38px -10px rgba(232,184,80,.85), 0 4px 14px -2px rgba(110,26,47,.28), inset 0 1px 0 rgba(255,255,255,.6),  inset 0 -2px 0 rgba(110,26,47,.18); }
+}
+
+/* WINE — secondary, juicy */
+.btn-wine{
+  color:var(--cream);
+  background: linear-gradient(135deg, #8A2440 0%, #6E1A2F 50%, #4A0F22 100%);
+  background-size: 180% 180%;
+  box-shadow:
+    0 14px 28px -10px rgba(74,15,34,.6),
+    inset 0 1px 0 rgba(255,255,255,.18),
+    inset 0 -2px 0 rgba(0,0,0,.3);
+}
+.btn-wine:hover{
+  background-position: 100% 100%;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+    0 22px 38px -10px rgba(110,26,47,.75),
+    0 0 0 1px rgba(201,162,76,.35),
+    inset 0 1px 0 rgba(255,255,255,.22),
+    inset 0 -2px 0 rgba(0,0,0,.3);
+}
+
+/* OUTLINE (dark on cream) */
+.btn-outline{
+  background:transparent; color:var(--ink); border:1.5px solid currentColor;
+  box-shadow: inset 0 0 0 0 var(--ink);
+}
+.btn-outline:hover{
+  background:var(--ink); color:var(--cream);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -10px rgba(26,15,10,.55);
+}
+
+/* GHOST CREAM (on dark) */
+.btn-ghost-cream{
+  background: rgba(245,232,208,.04);
+  color:var(--cream); border:1.5px solid rgba(245,232,208,.55);
+  backdrop-filter: blur(6px);
+}
+.btn-ghost-cream:hover{
+  background:var(--cream); color:var(--ink); border-color:var(--cream);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 32px -10px rgba(245,232,208,.35);
+}
+
+.btn:focus-visible{ outline:2px solid var(--gold-hot); outline-offset:4px; }
+
+/* === HERO CTA TILES (juicy, video-bg friendly) === */
+.hero-cta{
+  position:relative; display:block; overflow:hidden;
+  border-radius: 14px; isolation:isolate;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease;
+  text-decoration:none;
+}
+.hero-cta::before{
+  content:""; position:absolute; inset:0; z-index:0; border-radius:inherit;
+  transition: opacity .4s ease, transform .6s ease;
+}
+.hero-cta::after{
+  content:""; position:absolute; top:-50%; bottom:-50%; width:60%; left:-70%;
+  background: linear-gradient(115deg, transparent 0%, rgba(255,255,255,.45) 50%, transparent 100%);
+  transform: skewX(-18deg);
+  transition: left .9s cubic-bezier(.2,.8,.2,1);
+  pointer-events:none; z-index:2;
+}
+.hero-cta:hover{ transform: translateY(-3px); }
+.hero-cta:hover::after{ left:130%; }
+.hero-cta:active{ transform: translateY(-1px) scale(.99); }
+.hero-cta-inner{
+  position:relative; z-index:1;
+  display:flex; align-items:center; gap:14px;
+  padding: 14px 18px; min-height: 64px;
+  font-family:'Manrope',sans-serif;
+}
+.hero-cta-label{
+  font-weight:700; font-size:14px; letter-spacing:.18em; text-transform:uppercase; line-height:1;
+}
+.hero-cta-sub{
+  margin-top:4px; font-size:11px; letter-spacing:.14em; text-transform:uppercase; opacity:.72;
+}
+.hero-cta-arrow{
+  font-size:18px; font-weight:700; transition: transform .35s cubic-bezier(.2,.7,.2,1); opacity:.7;
+}
+.hero-cta:hover .hero-cta-arrow{ transform: translateX(5px); opacity:1; }
+
+/* Primary — gold gradient, glow */
+.hero-cta-primary{ color: var(--ink); box-shadow: 0 14px 38px -10px rgba(232,184,80,.55), 0 0 0 1px rgba(232,184,80,.4) inset; }
+.hero-cta-primary::before{
+  background:
+    radial-gradient(120% 140% at 0% 0%, #F8D77A 0%, #E8B850 35%, #C9A24C 75%, #A88234 100%);
+}
+.hero-cta-primary:hover{ box-shadow: 0 22px 50px -10px rgba(232,184,80,.7), 0 0 0 1px rgba(244,210,122,.6) inset, 0 0 30px -2px rgba(232,184,80,.4); }
+.hero-cta-primary:hover::before{ transform: scale(1.04); }
+
+/* Ghost — glass over video, gold border, fills wine on hover */
+.hero-cta-ghost{
+  color: var(--cream);
+  box-shadow: 0 8px 24px -10px rgba(0,0,0,.7), 0 0 0 1px rgba(245,232,208,.18) inset;
+}
+.hero-cta-ghost::before{
+  background:
+    linear-gradient(180deg, rgba(245,232,208,.10) 0%, rgba(26,15,10,.55) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.hero-cta-ghost::after{
+  background: linear-gradient(115deg, transparent 0%, rgba(232,184,80,.25) 50%, transparent 100%);
+}
+.hero-cta-ghost:hover{
+  box-shadow: 0 16px 36px -10px rgba(110,26,47,.6), 0 0 0 1px var(--gold-hot) inset;
+  color: var(--gold-hot);
+}
+.hero-cta-ghost:hover::before{
+  background: linear-gradient(180deg, rgba(110,26,47,.85) 0%, rgba(26,15,10,.85) 100%);
+}
+
+/* on small screens — keep dense */
+@media (max-width: 640px){
+  .hero-cta-inner{ padding: 12px 14px; min-height: 56px; gap: 12px; }
+  .hero-cta-label{ font-size: 12.5px; letter-spacing: .14em; }
+  .hero-cta-sub{ font-size: 10px; }
+}
+
+/* === REVEALS === */
+.reveal{ opacity:0; transform: translateY(22px); transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1); }
+.reveal.in{ opacity:1; transform:none; }
+.reveal-up-1{ transition-delay:.06s; }
+.reveal-up-2{ transition-delay:.16s; }
+.reveal-up-3{ transition-delay:.26s; }
+.reveal-up-4{ transition-delay:.36s; }
+
+/* char fade-in (kinetic title tagline) */
+.char{ display:inline-block; opacity:0; transform: translateY(.3em) scale(.96); filter: blur(8px); }
+.kin.in .char{ animation: charIn .9s cubic-bezier(.18,.7,.2,1) forwards; }
+@keyframes charIn{ to{ opacity:1; transform:none; filter:blur(0); } }
+
+/* === STAMPS === */
+.stamp{
+  display:inline-flex; align-items:center; justify-content:center;
+  font-family:'Manrope',sans-serif; font-weight:700;
+  letter-spacing:.16em; text-transform:uppercase;
+  border:2.5px solid currentColor; color:var(--wine);
+  padding: 6px 12px; font-size:11px; line-height:1;
+  background: transparent;
+}
+.stamp-circle{
+  width:96px; height:96px; border-radius:50%; padding:0;
+  font-size:11px; text-align:center; line-height:1.1;
+}
+.stamp-rough{
+  -webkit-mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='r'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feDisplacementMap in='SourceGraphic' scale='4'/></filter><rect width='100%' height='100%' fill='white' filter='url(%23r)'/></svg>");
+  mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='r'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feDisplacementMap in='SourceGraphic' scale='4'/></filter><rect width='100%' height='100%' fill='white' filter='url(%23r)'/></svg>");
+  -webkit-mask-size:cover; mask-size:cover;
+}
+
+/* === TAPE (scotch) === */
+.tape{
+  position:absolute; width:90px; height:24px;
+  background: linear-gradient(180deg, rgba(232,184,80,.65), rgba(201,162,76,.55));
+  box-shadow: 0 2px 6px rgba(26,15,10,.18);
+}
+.tape::before, .tape::after{
+  content:""; position:absolute; top:0; bottom:0; width:6px;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,.15) 0 30%, transparent 35%) ,
+    rgba(232,184,80,.6);
+}
+.tape::before{ left:0; }
+.tape::after{ right:0; }
+
+/* === THEATER VALANCE (top of viewport) === */
+.stage-valance{
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 90; pointer-events: none; height: 48px;
+}
+.stage-valance .velvet{
+  position:absolute; top:0; left:0; right:0; height:36px;
+  background:
+    radial-gradient(70% 110% at 50% 0%, rgba(255,255,255,.14) 0%, transparent 55%),
+    repeating-linear-gradient(90deg,
+      transparent 0 14px,
+      rgba(0,0,0,.42) 14px 15px,
+      transparent 15px 30px,
+      rgba(255,255,255,.09) 30px 31px,
+      transparent 31px 46px),
+    linear-gradient(180deg, #A82E47 0%, #6E1A2F 55%, #3A0A18 100%);
+  -webkit-mask-image: radial-gradient(circle 11px at 11px 100%, transparent 10px, #000 11px);
+          mask-image: radial-gradient(circle 11px at 11px 100%, transparent 10px, #000 11px);
+  -webkit-mask-size: 22px 100%; mask-size: 22px 100%;
+  -webkit-mask-repeat: repeat-x; mask-repeat: repeat-x;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,.55));
+}
+.stage-valance .trim{
+  position:absolute; top: 22px; left:0; right:0; height:1.5px;
+  background: linear-gradient(90deg, transparent 0%, rgba(244,210,122,.9) 8%, #F4D27A 50%, rgba(244,210,122,.9) 92%, transparent 100%);
+  box-shadow: 0 0 8px rgba(244,210,122,.55);
+}
+.stage-valance .tassels{
+  position:absolute; top: 30px; left:0; right:0; height: 16px;
+  background-image: radial-gradient(circle 3px at 11px 4px, #F4D27A 98%, transparent 99%);
+  background-size: 22px 16px; background-repeat: repeat-x;
+  filter: drop-shadow(0 1.5px 1.5px rgba(0,0,0,.5));
+}
+.stage-valance .tassels::after{
+  content:""; position:absolute; inset:0;
+  background: linear-gradient(180deg, #E8B850 0%, rgba(201,162,76,.3) 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(1.4px 7px at 11px 2px, #000 98%, transparent 100%);
+          mask-image: radial-gradient(1.4px 7px at 11px 2px, #000 98%, transparent 100%);
+  -webkit-mask-size: 22px 100%; mask-size: 22px 100%;
+  -webkit-mask-repeat: repeat-x; mask-repeat: repeat-x;
+}
+@media (max-width: 640px){
+  .stage-valance{ height: 38px; }
+  .stage-valance .velvet{ height: 28px; }
+  .stage-valance .trim{ top: 17px; }
+  .stage-valance .tassels{ top: 24px; }
+}
+.hero{
+  position:relative; height: 100svh; min-height: 0; max-height: 1100px;
+  background:#0A0503;
+  color:var(--cream); overflow:hidden;
+}
+.hero-video{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; object-position:center;
+  z-index:0;
+}
+.hero-veil{
+  position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:
+    linear-gradient(180deg, rgba(10,5,3,.55) 0%, rgba(10,5,3,.05) 28%, rgba(10,5,3,.15) 60%, rgba(10,5,3,.92) 100%),
+    linear-gradient(90deg, rgba(10,5,3,.78) 0%, rgba(10,5,3,.35) 45%, rgba(10,5,3,.0) 75%);
+}
+.hero-grain{
+  position:absolute; inset:0; z-index:2; pointer-events:none; opacity:.22; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/></svg>");
+}
+
+/* logo wordmark */
+.logo-wrap{ position:relative; z-index:3; filter: drop-shadow(0 30px 50px rgba(0,0,0,.6)); }
+.logo-img{
+  width: min(70vw, 680px);
+  max-height: 28svh;
+  height: auto; display:block;
+  margin:0 auto; object-fit:contain;
+  filter:
+    drop-shadow(0 0 30px rgba(233,78,61,.4))
+    drop-shadow(0 4px 18px rgba(0,0,0,.5));
+}
+.logo-tone{ filter: hue-rotate(0deg) saturate(1.05); }
+
+/* curtain loader */
+.curtain{
+  position:fixed; inset:0; z-index:200; display:flex; align-items:center; justify-content:center;
+  pointer-events:none;
+}
+.curtain.show{ pointer-events:auto; }
+.curtain-half{
+  position:absolute; top:0; bottom:0; width:52%;
+  background:
+    repeating-linear-gradient(90deg,
+      rgba(0,0,0,.0) 0 14px,
+      rgba(0,0,0,.18) 14px 16px,
+      rgba(0,0,0,.0) 16px 30px,
+      rgba(255,255,255,.07) 30px 32px),
+    radial-gradient(60% 100% at 50% 50%, var(--wine) 0%, var(--wine-deep) 60%, #2A0710 100%);
+  box-shadow: inset 0 0 80px rgba(0,0,0,.5);
+  transition: transform 1.4s cubic-bezier(.85,.0,.15,1);
+}
+.curtain-l{ left:0; }
+.curtain-r{ right:0; }
+.curtain.open .curtain-l{ transform: translateX(-101%); }
+.curtain.open .curtain-r{ transform: translateX(101%); }
+.curtain .badge{
+  z-index:2; text-align:center; color:var(--gold-hot);
+  transition: opacity .5s ease;
+}
+.curtain.open .badge{ opacity:0; }
+.curtain .badge .star{
+  font-family:'Bodoni Moda',serif; font-weight:900; font-size: clamp(48px,8vw,96px);
+  letter-spacing:.05em;
+}
+.curtain-rod{ display: none; }
+
+/* === MARQUEE === */
+.marquee{
+  display:flex; gap:0;
+  background:var(--wine); color:var(--gold-hot);
+  border-top: 1px solid rgba(201,162,76,.4);
+  border-bottom: 1px solid rgba(201,162,76,.4);
+  overflow:hidden;
+}
+.marquee-track{
+  display:flex; gap: 48px; padding: 18px 24px;
+  white-space:nowrap; animation: marq 32s linear infinite;
+  font-family:'Bodoni Moda',serif; font-weight:800; font-style:italic;
+  font-size: clamp(20px, 2.8vw, 36px); letter-spacing:.02em;
+}
+.marquee-track span.sep{ color:rgba(245,232,208,.4); font-style:normal; }
+@keyframes marq{ from{ transform: translateX(0); } to{ transform: translateX(-50%); } }
+
+/* === MANIFESTO === */
+.manifesto-line{
+  font-family:'Bodoni Moda',serif; font-weight:800;
+  font-size: clamp(56px, 12vw, 192px); line-height:.92; letter-spacing:-.03em;
+  display:block; color:var(--cream);
+}
+.manifesto-line .ital{ font-style:italic; font-weight:400; color:var(--gold-hot); }
+.manifesto-line.ghost{ color: transparent; -webkit-text-stroke: 1.5px rgba(245,232,208,.35); }
+
+/* === TICKETS (afisha) === */
+.tickets-track{
+  display:flex; gap: 36px; padding: 8px 48px 48px;
+  overflow-x:auto; scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.tickets-track::-webkit-scrollbar{ display:none; }
+.ticket{
+  flex: 0 0 auto; width: 380px; height: 520px;
+  scroll-snap-align: center;
+  position:relative; transform: rotate(-2deg);
+  transition: transform .5s cubic-bezier(.2,.7,.2,1);
+}
+.ticket:nth-child(2n){ transform: rotate(2deg); }
+.ticket:nth-child(3n){ transform: rotate(-1.5deg); }
+.ticket:hover{ transform: rotate(0deg) translateY(-12px); }
+.ticket-paper{
+  position:relative; width:100%; height:100%;
+  background:
+    radial-gradient(120% 80% at 20% 10%, rgba(255,255,255,.4), transparent 50%),
+    linear-gradient(180deg, #F4E2B5, #E8C97A);
+  color:var(--ink);
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,.4), 0 8px 18px rgba(0,0,0,.18);
+  padding: 28px 28px 28px 44px;
+  border-left: 8px solid var(--wine);
+  display:flex; flex-direction:column; gap:14px;
+  -webkit-mask-image:
+    radial-gradient(circle 8px at 0 36px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 60px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 84px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 108px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 132px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 156px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 180px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 204px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 228px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 252px, transparent 98%, #000 99%),
+    linear-gradient(#000, #000);
+  mask-image:
+    radial-gradient(circle 8px at 0 36px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 60px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 84px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 108px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 132px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 156px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 180px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 204px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 228px, transparent 98%, #000 99%),
+    radial-gradient(circle 8px at 0 252px, transparent 98%, #000 99%),
+    linear-gradient(#000, #000);
+}
+.ticket-stub{ border-top: 2px dashed rgba(26,15,10,.35); padding-top: 14px; margin-top: auto; }
+
+/* === POLAROIDS (team) === */
+.cork{
+  background:
+    radial-gradient(circle at 20% 20%, rgba(60,40,20,.25), transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(40,20,10,.2), transparent 60%),
+    linear-gradient(180deg, #c79966, #a47742);
+  position:relative; border-radius: 12px;
+  box-shadow: inset 0 0 80px rgba(0,0,0,.3), 0 30px 80px -30px rgba(0,0,0,.5);
+}
+.cork::before{
+  content:""; position:absolute; inset:0; border-radius:12px; pointer-events:none;
+  background-image:
+    radial-gradient(2px 2px at 12% 22%, rgba(0,0,0,.18), transparent 50%),
+    radial-gradient(2px 2px at 28% 70%, rgba(0,0,0,.16), transparent 50%),
+    radial-gradient(2px 2px at 60% 35%, rgba(0,0,0,.14), transparent 50%),
+    radial-gradient(2px 2px at 80% 78%, rgba(0,0,0,.2), transparent 50%),
+    radial-gradient(2px 2px at 88% 18%, rgba(0,0,0,.16), transparent 50%);
+  mix-blend-mode: multiply; opacity:.7;
+}
+.cork::after{
+  content:""; position:absolute; inset:6px; border-radius: 8px; pointer-events:none;
+  border: 8px solid #2A1810;
+  box-shadow: inset 0 0 0 2px rgba(201,162,76,.4);
+}
+.polaroid{
+  position:absolute; width: 240px; cursor: grab;
+  background: #F8EFD8; padding: 14px 14px 56px;
+  box-shadow: 0 20px 40px -10px rgba(0,0,0,.5), 0 6px 12px rgba(0,0,0,.25);
+  touch-action: none; user-select:none;
+  transition: box-shadow .25s ease;
+}
+.polaroid.drag{ cursor: grabbing; box-shadow: 0 36px 60px -12px rgba(0,0,0,.6), 0 12px 22px rgba(0,0,0,.3); z-index: 10; }
+
+/* mobile: static stack, no absolute positioning, no drag */
+@media (max-width: 720px){
+  .cork{ height: auto !important; padding: 32px 18px 36px; }
+  .cork-stack{ display: flex; flex-direction: column; align-items: center; gap: 28px; }
+  .polaroid{
+    position: relative !important;
+    width: min(78%, 280px);
+    left: auto !important; top: auto !important;
+    transform: rotate(var(--mrot, -3deg)) !important;
+    cursor: default;
+    touch-action: auto;
+  }
+  .polaroid:nth-child(odd){ --mrot: -3deg; align-self: flex-start; }
+  .polaroid:nth-child(even){ --mrot: 3deg; align-self: flex-end; }
+  .polaroid:nth-child(3n){ --mrot: -1.5deg; align-self: center; }
+}
+.polaroid .photo{
+  width:100%; aspect-ratio: 1/1.05; background:#3a2418;
+  position:relative; overflow:hidden;
+}
+.polaroid .photo img,
+.polaroid .photo .photo-fallback{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  filter: sepia(.35) saturate(1.1) contrast(.95) brightness(.96);
+}
+.polaroid .caption{
+  position:absolute; bottom:14px; left:14px; right:14px;
+  font-family:'Caveat',cursive; font-size:24px; line-height:1; color:var(--ink-2);
+  text-align:center;
+}
+.polaroid .pin{
+  position:absolute; top:-10px; left:50%; transform: translateX(-50%);
+  width:18px; height:18px; border-radius:50%;
+  background: radial-gradient(circle at 35% 30%, var(--gold-hot), var(--wine) 60%, var(--ink) 100%);
+  box-shadow: 0 2px 6px rgba(0,0,0,.4);
+}
+
+/* === QUOTES (torn paper) === */
+.quote-card{
+  position:relative;
+  background:
+    radial-gradient(120% 80% at 30% 20%, rgba(255,255,255,.45), transparent 60%),
+    linear-gradient(180deg, #F8EFD8 0%, #EAD5A6 100%);
+  padding: 38px 36px 44px;
+  box-shadow: 0 28px 60px -20px rgba(0,0,0,.45), 0 6px 14px rgba(0,0,0,.18);
+  -webkit-mask-image:
+    radial-gradient(circle 12px at 12% 100%, transparent 96%, #000 97%),
+    radial-gradient(circle 8px at 30% 100%, transparent 96%, #000 97%),
+    radial-gradient(circle 10px at 50% 100%, transparent 96%, #000 97%),
+    radial-gradient(circle 9px at 72% 100%, transparent 96%, #000 97%),
+    radial-gradient(circle 11px at 90% 100%, transparent 96%, #000 97%),
+    radial-gradient(circle 9px at 18% 0%, transparent 96%, #000 97%),
+    radial-gradient(circle 12px at 42% 0%, transparent 96%, #000 97%),
+    radial-gradient(circle 8px at 64% 0%, transparent 96%, #000 97%),
+    radial-gradient(circle 10px at 84% 0%, transparent 96%, #000 97%),
+    linear-gradient(#000,#000);
+  mask-image:
+    radial-gradient(circle 12px at 12% 100%, transparent 96%, #000 97%),
+    radial-gradient(circle 8px at 30% 100%, transparent 96%, #000 97%),
+    radial-gradient(circle 10px at 50% 100%, transparent 96%, #000 97%),
+    radial-gradient(circle 9px at 72% 100%, transparent 96%, #000 97%),
+    radial-gradient(circle 11px at 90% 100%, transparent 96%, #000 97%),
+    radial-gradient(circle 9px at 18% 0%, transparent 96%, #000 97%),
+    radial-gradient(circle 12px at 42% 0%, transparent 96%, #000 97%),
+    radial-gradient(circle 8px at 64% 0%, transparent 96%, #000 97%),
+    radial-gradient(circle 10px at 84% 0%, transparent 96%, #000 97%),
+    linear-gradient(#000,#000);
+}
+.quote-text{
+  font-family:'Bodoni Moda',serif; font-style:italic; font-weight:400;
+  font-size: clamp(20px, 2vw, 28px); line-height:1.25; color:var(--ink);
+}
+.quote-text .red{ color:var(--wine); }
+.quote-num{ font-family:'Bodoni Moda',serif; font-weight:900; color:var(--wine); font-size:22px; letter-spacing:.1em; }
+
+/* === SECTION LABEL (Wes/cinema) === */
+.section-label{
+  display:flex; align-items:center; gap:1rem; padding:18px 0;
+  border-top:1px solid rgba(26,15,10,.18); border-bottom:1px solid rgba(26,15,10,.18);
+}
+.section-label .act{ font-family:'Bodoni Moda',serif; font-weight:900; font-style:italic; font-size:14px; letter-spacing:.3em; color:var(--wine); }
+.section-label .scene{ font-family:'Manrope',sans-serif; font-weight:500; font-size:12px; letter-spacing:.3em; text-transform:uppercase; color:var(--shadow); }
+.section-label .rule{ flex:1; height:1px; background:linear-gradient(90deg, var(--gold) 0%, transparent 100%); opacity:.5; }
+
+/* === GALLERY (backstage) === */
+.mason{ column-count: 1; column-gap: 18px; }
+@media(min-width: 640px){ .mason{ column-count: 2; } }
+@media(min-width: 1024px){ .mason{ column-count: 3; } }
+.mason-item{ break-inside: avoid; margin-bottom: 18px; position:relative; }
+.mason-item img{ width:100%; display:block; filter: sepia(.32) saturate(1.05) contrast(.96) brightness(.96); transition: filter .5s ease, transform .6s cubic-bezier(.2,.7,.2,1); box-shadow: 0 22px 50px -20px rgba(0,0,0,.45), 0 4px 12px rgba(0,0,0,.18); }
+.mason-item:hover img{ filter:none; transform: translateY(-3px); }
+
+/* === POSTERS strip === */
+.posters{ display:grid; grid-template-columns: 1fr; gap: 28px; }
+@media(min-width: 768px){ .posters{ grid-template-columns: repeat(3, 1fr); gap: 32px; } }
+.poster{ position:relative; transition: transform .5s cubic-bezier(.2,.7,.2,1); }
+.poster:nth-child(1){ transform: rotate(-1.5deg); }
+.poster:nth-child(2){ transform: rotate(.8deg); }
+.poster:nth-child(3){ transform: rotate(-.6deg); }
+.poster:hover{ transform: rotate(0) translateY(-6px); }
+.poster img{ width:100%; display:block; aspect-ratio: 3/4.2; object-fit:cover; box-shadow: 0 32px 70px -20px rgba(0,0,0,.55), 0 6px 14px rgba(0,0,0,.2); }
+
+/* === CINEMA frame for trailer === */
+.cinema{
+  position:relative; aspect-ratio: 16/9; background:#0a0503;
+  border: 10px solid #1A0F0A;
+  box-shadow:
+    0 0 0 2px var(--gold) inset,
+    0 0 0 12px #1A0F0A,
+    0 40px 80px -30px rgba(0,0,0,.7);
+}
+.cinema::before, .cinema::after{
+  content:""; position:absolute; left:-10px; right:-10px; height:18px;
+  background:
+    linear-gradient(90deg, transparent 0, transparent 10px, #1A0F0A 10px, #1A0F0A calc(100% - 10px), transparent calc(100% - 10px)),
+    repeating-linear-gradient(90deg, var(--cream) 0 14px, transparent 14px 28px);
+  background-blend-mode: multiply;
+}
+.cinema::before{ top:-28px; }
+.cinema::after{ bottom:-28px; }
+
+/* === NAV === */
+.nav{
+  position:fixed; top: 36px; left:0; right:0; z-index:80;
+  transition: background .35s ease, backdrop-filter .35s ease, box-shadow .35s ease;
+  color:var(--cream);
+}
+@media (max-width: 640px){ .nav{ top: 28px; } }
+.nav.scrolled{
+  background: rgba(26,15,10,.86);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 rgba(201,162,76,.3);
+}
+.nav a.ul-hover{ position:relative; }
+.nav a.ul-hover::after{ content:""; position:absolute; left:0; right:0; bottom:-6px; height:1px; background:currentColor; transform: scaleX(0); transform-origin:left; transition: transform .25s ease; }
+.nav a.ul-hover:hover::after{ transform: scaleX(1); }
+
+/* sticky CTA */
+.sticky-cta{
+  position:fixed; right: 24px; bottom: 24px; z-index: 70;
+  opacity:0; transform: translateY(20px) scale(.9); pointer-events:none;
+  transition: opacity .4s ease, transform .4s ease;
+}
+.sticky-cta.show{ opacity:1; transform:none; pointer-events:auto; }
+
+/* misc */
+.divider-row{ display:flex; align-items:center; gap:1rem; }
+.divider-row::before, .divider-row::after{ content:""; flex:1; height:1px; background:linear-gradient(90deg, transparent, rgba(26,15,10,.3), transparent); }
+
+/* sound button */
+.sound-btn{
+  position:fixed; left:24px; bottom:24px; z-index:70;
+  width:48px; height:48px; border-radius:50%;
+  background: rgba(26,15,10,.78); color:var(--gold-hot);
+  display:flex; align-items:center; justify-content:center;
+  border:1px solid rgba(201,162,76,.35);
+  backdrop-filter: blur(8px);
+}
+
+/* mobile menu */
+#mobileMenu{ transform: translateY(-12px); opacity:0; pointer-events:none; transition: opacity .25s, transform .25s; }
+#mobileMenu.open{ transform:none; opacity:1; pointer-events:auto; }
+
+/* tilted helpers */
+.tilt-l{ transform: rotate(-2deg); }
+.tilt-r{ transform: rotate(2deg); }
+.tilt-lg-l{ transform: rotate(-6deg); }
+.tilt-lg-r{ transform: rotate(5deg); }
+
+/* reduce motion */
+@media (prefers-reduced-motion: reduce){
+  .marquee-track{ animation: none; }
+  .reveal{ opacity:1; transform:none; transition:none; }
+  .char{ opacity:1; transform:none; filter:none; animation:none; }
+}
+html.reduce-anim .marquee-track{ animation: none; }
+html.reduce-anim .reveal{ opacity:1; transform:none; transition:none; }
+html.reduce-anim .char{ opacity:1; transform:none; filter:none; animation:none; }
+html.reduce-anim .spotlight{ display:none; }
+html.reduce-anim .hero-dim{ display:none; }
+
+/* small adjustments */
+@media (max-width: 640px){
+  .ticket{ width: 300px; height: 460px; }
+  .marquee-track{ font-size: 22px; gap: 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============== CURTAIN LOADER ============== -->
+<div id="curtain" class="curtain show">
+  <div class="curtain-rod"></div>
+  <div class="curtain-half curtain-l"></div>
+  <div class="curtain-half curtain-r"></div>
+  <div class="badge">
+    <div class="star">✦</div>
+    <div class="eyebrow mt-3" style="color:var(--cream); opacity:.85">Музично-поетична формація</div>
+    <div class="hand mt-2" style="font-size:30px; color:var(--gold-hot)">Підіймається завіса…</div>
+  </div>
+</div>
+
+<!-- ============== THEATER VALANCE (permanent top decoration) ============== -->
+<div class="stage-valance" aria-hidden="true">
+  <div class="velvet"></div>
+  <div class="trim"></div>
+  <div class="tassels"></div>
+</div>
+
+<!-- ============== NAV ============== -->
+<header id="nav" class="nav">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 h-[72px] flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3 group" aria-label="На головну — Територія Жінки">
+      <img src="assets/logo/logo-1.webp" alt="Територія Жінки" class="w-auto transition-transform duration-500 group-hover:scale-[1.04]" style="height:15px; filter: drop-shadow(0 2px 10px rgba(233,78,61,.35)) brightness(1.05);" />
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-[13px] font-medium" style="letter-spacing:.12em; text-transform:uppercase;">
+      <a class="ul-hover" href="#trailer">Трейлер</a>
+      <a class="ul-hover" href="#afisha">Афіша</a>
+      <a class="ul-hover" href="#posters">Постери</a>
+      <a class="ul-hover" href="#team">Команда</a>
+      <a class="ul-hover" href="#quotes">Цитати</a>
+      <a class="ul-hover" href="#gallery">Закулісся</a>
+      <a class="ul-hover" href="#contacts">Контакти</a>
+    </nav>
+    <a href="https://secure.wayforpay.com" target="_blank" rel="noopener" class="btn btn-gold hidden sm:inline-flex" style="padding: 12px 22px; min-height:42px;">Квитки</a>
+    <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-11 h-11 border border-current/40 rounded-md" aria-label="Меню">
+      <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="md:hidden fixed inset-0 top-[100px] ink-bg p-8 flex flex-col gap-6 text-3xl display">
+    <a href="#trailer">Трейлер</a>
+    <a href="#afisha">Афіша</a>
+    <a href="#posters">Постери</a>
+    <a href="#team">Команда</a>
+    <a href="#quotes">Цитати</a>
+    <a href="#gallery">Закулісся</a>
+    <a href="#contacts">Контакти</a>
+    <a href="https://secure.wayforpay.com" target="_blank" rel="noopener" class="btn btn-gold mt-2">Купити квитки</a>
+  </div>
+</header>
+
+<!-- ============== HERO ============== -->
+<section id="top" class="hero" data-screen-label="01 Hero">
+  <!-- background video -->
+  <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="">
+    <source src="assets/hero.webm" type="video/webm" />
+  </video>
+  <div class="hero-veil"></div>
+  <div class="hero-grain"></div>
+
+  <!-- corner ornaments -->
+  <svg aria-hidden="true" class="absolute top-24 right-8 w-[200px] h-[200px] hidden lg:block z-[3]" style="color:var(--gold-hot); opacity:.28;" viewBox="0 0 200 240" fill="none" stroke="currentColor" stroke-width=".9">
+    <!-- vintage microphone -->
+    <ellipse cx="100" cy="70" rx="34" ry="48"/>
+    <path d="M100 118 V178 M70 178 H130 M64 70 a36 36 0 0 0 72 0"/>
+    <g stroke-dasharray="2 4"><path d="M100 70 m-22 -16 l44 0 M100 70 m-22 -4 l44 0 M100 70 m-22 8 l44 0"/></g>
+  </svg>
+
+  <!-- foreground content -->
+  <div class="relative z-[4] max-w-[1400px] mx-auto px-6 lg:px-10 pt-[100px] pb-6 h-full flex flex-col">
+    <!-- top meta strip -->
+    <div class="flex items-center justify-between flex-wrap gap-2 text-cream/85 reveal">
+      <div class="eyebrow flex items-center gap-3" style="color:var(--gold-hot);">
+        <span class="inline-block w-6 h-px bg-gold-hot/70"></span>
+        Музично-поетична формація · Київ · 2026
+      </div>
+      <div class="hidden sm:flex items-center gap-3 text-[11px] text-cream/65" style="letter-spacing:.16em; text-transform:uppercase;">
+        <span>Прем'єра</span>
+        <span class="num text-gold-hot text-[18px]">19.03</span>
+        <span class="opacity-30">|</span>
+        <span>Гідропарк · Магічний Кораблик</span>
+      </div>
+    </div>
+
+    <!-- title block — left-aligned -->
+    <div class="flex-1 min-h-0 flex flex-col justify-center max-w-[920px] py-2">
+      <div class="reveal reveal-up-1">
+        <img src="assets/logo/logo-2.webp" alt="Територія Жінки"
+             class="hero-logo block"
+             style="width: min(62vw, 520px); max-height: 38svh; height:auto; object-fit:contain; object-position:left center; filter: drop-shadow(0 6px 24px rgba(0,0,0,.7)) drop-shadow(0 0 36px rgba(233,78,61,.35));" />
+      </div>
+
+      <div id="taglineKin" class="kin reveal reveal-up-2 mt-1 sm:mt-2">
+        <div class="script" style="font-size: clamp(36px, 6.5vw, 86px); line-height: .82; color:var(--gold-hot); text-shadow: 0 4px 24px rgba(0,0,0,.55);">
+          <span class="char" style="animation-delay:.05s">т</span><span class="char" style="animation-delay:.10s">а</span><span class="char" style="animation-delay:.15s">є</span><span class="char" style="animation-delay:.20s">м</span><span class="char" style="animation-delay:.25s">н</span><span class="char" style="animation-delay:.30s">і</span>
+          <span class="inline-block w-3"></span>
+          <span class="char" style="animation-delay:.40s">ф</span><span class="char" style="animation-delay:.45s">а</span><span class="char" style="animation-delay:.50s">й</span><span class="char" style="animation-delay:.55s">л</span><span class="char" style="animation-delay:.60s">и</span>
+        </div>
+      </div>
+
+      <p class="display-italic max-w-[620px] text-[15px] sm:text-[17px] lg:text-[20px] text-cream/85 reveal reveal-up-3 mt-3 sm:mt-5 leading-snug" style="text-shadow: 0 2px 10px rgba(0,0,0,.6);">
+        Романтична музична комедія братів Капранових — з кобзою, клавішами, кларнетом і голосом, який змінює правила гри.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-2 mt-3 sm:mt-5 reveal reveal-up-3">
+        <span class="stamp" style="color:var(--gold-hot); border-color:var(--gold-hot); background:rgba(10,5,3,.4); backdrop-filter:blur(4px);">18+</span>
+        <span class="stamp" style="color:var(--cream); border-color:rgba(245,232,208,.55); background:rgba(10,5,3,.4); backdrop-filter:blur(4px);">1 год 30 хв</span>
+        <span class="stamp" style="color:var(--cream); border-color:rgba(245,232,208,.55); background:rgba(10,5,3,.4); backdrop-filter:blur(4px);">Українською</span>
+        <span class="stamp" style="color:var(--wine); border-color:var(--gold-hot); background:var(--gold-hot);">Live music</span>
+      </div>
+    </div>
+
+    <!-- bottom action row -->
+    <div class="reveal reveal-up-4 grid sm:grid-cols-3 gap-2 sm:gap-3 items-stretch">
+      <a href="https://secure.wayforpay.com" target="_blank" rel="noopener" class="hero-cta hero-cta-primary group">
+        <div class="hero-cta-inner">
+          <svg viewBox="0 0 24 24" class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M3 7 L21 7 L20 17 L4 17 Z"/><path d="M8 7 V5 a2 2 0 0 1 2 -2 h4 a2 2 0 0 1 2 2 v2"/>
+          </svg>
+          <div class="text-left flex-1">
+            <div class="hero-cta-label">Купити квитки</div>
+            <div class="hero-cta-sub">800 – 1200 ₴</div>
+          </div>
+          <span class="hero-cta-arrow">→</span>
+        </div>
+      </a>
+      <a href="#trailer" class="hero-cta hero-cta-ghost group">
+        <div class="hero-cta-inner">
+          <svg viewBox="0 0 24 24" class="w-5 h-5 shrink-0" fill="currentColor"><path d="M6 4 L20 12 L6 20 Z"/></svg>
+          <div class="text-left flex-1">
+            <div class="hero-cta-label">Трейлер</div>
+            <div class="hero-cta-sub">1:30 · live звук</div>
+          </div>
+          <span class="hero-cta-arrow">→</span>
+        </div>
+      </a>
+      <a href="#afisha" class="hero-cta hero-cta-ghost group">
+        <div class="hero-cta-inner">
+          <svg viewBox="0 0 24 24" class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 9 H21 M8 3 V7 M16 3 V7"/>
+          </svg>
+          <div class="text-left flex-1">
+            <div class="hero-cta-label">Афіша</div>
+            <div class="hero-cta-sub">16 · 17 липня</div>
+          </div>
+          <span class="hero-cta-arrow">→</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- mute toggle on video -->
+  <button id="heroMute" class="absolute z-[5] bottom-4 right-4 sm:bottom-6 sm:right-6 w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-gold-hot/40 text-gold-hot bg-ink/60 backdrop-blur-md flex items-center justify-center hover:bg-gold-hot hover:text-ink transition-colors" aria-label="Звук відео">
+    <svg id="muteIcon" viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M4 9 H8 L13 4 V20 L8 15 H4 Z"/><path d="M17 9 L21 13 M21 9 L17 13" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+  </button>
+</section>
+
+<style>@keyframes pulse{ 0%,100%{ transform:scale(1); opacity:1 } 50%{ transform:scale(1.6); opacity:.4 } }</style>
+
+<!-- ============== MARQUEE ============== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Прем'єра · 19 березня 2026</span><span class="sep">✦</span>
+    <span>Романтична музична комедія</span><span class="sep">✦</span>
+    <span>Брати Капранови</span><span class="sep">✦</span>
+    <span>Live music</span><span class="sep">✦</span>
+    <span>18+</span><span class="sep">✦</span>
+    <span>Гідропарк · Магічний Кораблик</span><span class="sep">✦</span>
+    <!-- dup -->
+    <span>Прем'єра · 19 березня 2026</span><span class="sep">✦</span>
+    <span>Романтична музична комедія</span><span class="sep">✦</span>
+    <span>Брати Капранови</span><span class="sep">✦</span>
+    <span>Live music</span><span class="sep">✦</span>
+    <span>18+</span><span class="sep">✦</span>
+    <span>Гідропарк · Магічний Кораблик</span><span class="sep">✦</span>
+  </div>
+</div>
+
+<!-- ============== TRAILER ============== -->
+<section id="trailer" class="ink-bg py-24 lg:py-32" data-screen-label="02 Trailer">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="section-label mb-12 reveal" style="border-color:rgba(245,232,208,.18);">
+      <span class="act text-gold-hot">Акт I</span>
+      <span class="scene text-cream/60">Сцена · Кіно-кадр</span>
+      <span class="rule" style="background:linear-gradient(90deg, var(--gold-hot), transparent);"></span>
+      <span class="num text-[18px] text-gold-hot">№ 01</span>
+    </div>
+
+    <div class="text-center mb-10 reveal reveal-up-1">
+      <h2 class="display text-cream text-[56px] lg:text-[88px]">Трейлер вистави</h2>
+      <p class="hand text-gold-hot text-[28px] mt-2">— перший погляд.</p>
+    </div>
+
+    <div class="cinema max-w-[1080px] mx-auto reveal reveal-up-2" id="cinemaFrame">
+      <video
+        id="trailerVideo"
+        class="absolute inset-0 w-full h-full object-cover bg-black"
+        src="assets/trailer.webm"
+        preload="metadata"
+        playsinline
+        controls
+        poster=""></video>
+
+      <!-- film reel ticks corners (above video) -->
+      <div class="absolute top-3 left-3 right-3 flex justify-between text-gold-hot text-[10px] pointer-events-none z-[2]" style="letter-spacing:.3em; font-family:'Manrope'; font-weight:600;">
+        <span>REEL · 01</span><span>UA · 90 MIN · 2026</span>
+      </div>
+      <div class="absolute bottom-3 left-3 right-3 flex justify-between text-gold-hot/70 text-[10px] pointer-events-none z-[2]" style="letter-spacing:.3em; font-family:'Manrope'; font-weight:600;">
+        <span>NO. 2026-03-19</span><span>SOUND · LIVE</span>
+      </div>
+
+      <!-- custom poster overlay until first play -->
+      <button id="playBtn" class="absolute inset-0 flex items-center justify-center group z-[3]" aria-label="Відтворити трейлер" style="background: radial-gradient(80% 60% at 50% 35%, rgba(232,184,80,.18), transparent 70%), radial-gradient(60% 50% at 30% 80%, rgba(110,26,47,.5), transparent 60%), linear-gradient(180deg, #2A1810 0%, #0a0503 100%);">
+        <span class="absolute w-40 h-40 rounded-full border-2 border-gold-hot/60 group-hover:scale-110 transition-transform"></span>
+        <span class="absolute w-56 h-56 rounded-full border border-gold-hot/30 group-hover:scale-105 transition-transform"></span>
+        <span class="w-24 h-24 rounded-full bg-gold-hot flex items-center justify-center shadow-2xl group-hover:bg-gold transition-colors">
+          <svg viewBox="0 0 24 24" class="w-9 h-9 text-ink" fill="currentColor"><path d="M8 5 L19 12 L8 19 Z"/></svg>
+        </span>
+        <span class="absolute bottom-12 left-0 right-0 text-center pointer-events-none">
+          <span class="script text-cream/90 text-[36px]">…а королева знайдеться.</span>
+        </span>
+      </button>
+    </div>
+
+    <p class="text-center mt-6 text-cream/60 text-[12px]" style="letter-spacing:.3em; text-transform:uppercase;">Реліз — травень 2026</p>
+  </div>
+</section>
+
+<!-- ============== AFISHA / TICKETS ============== -->
+<section id="afisha" class="paper-bg py-24 lg:py-32 overflow-hidden" data-screen-label="03 Afisha">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div class="section-label mb-10 reveal">
+      <span class="act">Акт II</span>
+      <span class="scene">Сцена · Афіша 2026</span>
+      <span class="rule"></span>
+      <span class="num text-[18px] text-wine">№ 02</span>
+    </div>
+
+    <div class="flex items-end justify-between flex-wrap gap-6 mb-8">
+      <h2 class="display text-[48px] lg:text-[88px] reveal max-w-[820px]">
+        Три квитки.<br/><span class="display-italic text-wine">Тільки в Києві.</span>
+      </h2>
+      <div class="hand text-[24px] text-shadow max-w-[280px] reveal reveal-up-1">
+        ↘ потягни вбік або<br/>обери дату нижче
+      </div>
+    </div>
+  </div>
+
+  <!-- horizontal tickets track -->
+  <div class="relative reveal reveal-up-2">
+    <div class="tickets-track" id="ticketsTrack" tabindex="0" aria-label="Афіша показів — горизонтальний скрол">
+      <!-- TICKET 1 — Premiere -->
+      <article class="ticket">
+        <div class="ticket-paper">
+          <div class="flex items-start justify-between">
+            <div>
+              <div class="eyebrow text-wine">Прем'єра</div>
+              <div class="hand text-[28px] text-shadow leading-none mt-1">№ 001</div>
+            </div>
+            <div class="stamp" style="transform: rotate(8deg); color:var(--wine); border-color:var(--wine);">Sold out</div>
+          </div>
+          <div class="num text-[120px] leading-[.78] text-wine">19<span class="text-[40px] align-top">·03</span></div>
+          <div class="display text-[28px]">Четвер, <span class="display-italic">19:00</span></div>
+          <div class="font-body text-shadow text-[14px]">Гідропарк · Магічний Кораблик</div>
+          <div class="ticket-stub">
+            <div class="flex items-baseline justify-between">
+              <div>
+                <div class="eyebrow text-wine">Місць немає</div>
+                <div class="hand text-[20px] text-shadow">«перший раз — як перший поцілунок»</div>
+              </div>
+              <div class="num text-[28px] text-wine">— —</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- TICKET 2 — 16.07 -->
+      <article class="ticket">
+        <div class="ticket-paper">
+          <div class="flex items-start justify-between">
+            <div>
+              <div class="eyebrow text-wine">Літо · показ</div>
+              <div class="hand text-[28px] text-shadow leading-none mt-1">№ 002</div>
+            </div>
+            <div class="stamp" style="transform: rotate(-6deg); color:var(--gold-hot); border-color:var(--gold-hot); background:var(--wine);">Available</div>
+          </div>
+          <div class="num text-[120px] leading-[.78] text-wine">16<span class="text-[40px] align-top">·07</span></div>
+          <div class="display text-[28px]">Четвер, <span class="display-italic">19:00</span></div>
+          <div class="font-body text-shadow text-[14px]">Гідропарк · Магічний Кораблик</div>
+          <div class="ticket-stub">
+            <div class="flex items-baseline justify-between gap-4">
+              <div>
+                <div class="eyebrow text-wine">Ціна</div>
+                <div class="num text-[28px]">800–1200 ₴</div>
+              </div>
+              <a href="https://secure.wayforpay.com" target="_blank" rel="noopener" class="btn btn-wine" style="padding:12px 18px; min-height:38px; font-size:12px;">Купити →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- TICKET 3 — 17.07 -->
+      <article class="ticket">
+        <div class="ticket-paper">
+          <div class="flex items-start justify-between">
+            <div>
+              <div class="eyebrow text-wine">Літо · показ</div>
+              <div class="hand text-[28px] text-shadow leading-none mt-1">№ 003</div>
+            </div>
+            <div class="stamp" style="transform: rotate(-6deg); color:var(--gold-hot); border-color:var(--gold-hot); background:var(--wine);">Available</div>
+          </div>
+          <div class="num text-[120px] leading-[.78] text-wine">17<span class="text-[40px] align-top">·07</span></div>
+          <div class="display text-[28px]">П'ятниця, <span class="display-italic">19:00</span></div>
+          <div class="font-body text-shadow text-[14px]">Гідропарк · Магічний Кораблик</div>
+          <div class="ticket-stub">
+            <div class="flex items-baseline justify-between gap-4">
+              <div>
+                <div class="eyebrow text-wine">Ціна</div>
+                <div class="num text-[28px]">800–1200 ₴</div>
+              </div>
+              <a href="https://secure.wayforpay.com" target="_blank" rel="noopener" class="btn btn-wine" style="padding:12px 18px; min-height:38px; font-size:12px;">Купити →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- TICKET 4 — coming soon -->
+      <article class="ticket">
+        <div class="ticket-paper" style="background:
+          radial-gradient(120% 80% at 20% 10%, rgba(255,255,255,.3), transparent 50%),
+          linear-gradient(180deg, #EADBB8, #C9A24C);">
+          <div class="flex items-start justify-between">
+            <div>
+              <div class="eyebrow text-wine">Восени</div>
+              <div class="hand text-[28px] text-shadow leading-none mt-1">№ 004…</div>
+            </div>
+            <div class="stamp" style="transform: rotate(8deg); color:var(--ink); border-color:var(--ink);">Soon</div>
+          </div>
+          <div class="num text-[96px] leading-[.78] text-ink display-italic">— · —</div>
+          <div class="display text-[28px]">Дата уточнюється</div>
+          <div class="font-body text-shadow text-[14px]">Підпишіться на новини у Facebook</div>
+          <div class="ticket-stub">
+            <a href="https://www.facebook.com/profile.php?id=100078418107612" target="_blank" rel="noopener" class="btn btn-outline" style="padding:12px 18px; min-height:38px; font-size:12px;">Слідкувати ↗</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- scroll controls -->
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10 flex items-center justify-between gap-4 mt-4">
+      <div class="flex gap-2">
+        <button class="ticket-prev w-12 h-12 rounded-full border border-ink/40 hover:bg-ink hover:text-cream transition-colors" aria-label="Попередня">←</button>
+        <button class="ticket-next w-12 h-12 rounded-full border border-ink/40 hover:bg-ink hover:text-cream transition-colors" aria-label="Наступна">→</button>
+      </div>
+      <a href="https://secure.wayforpay.com" target="_blank" rel="noopener" class="btn btn-gold">Купити квитки</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== POSTERS (concept afishas) ============== -->
+<section id="posters" class="paper-bg pt-4 pb-24 lg:pb-32" data-screen-label="03a Posters">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div class="section-label mb-10 reveal">
+      <span class="act">Інтермедія</span>
+      <span class="scene">Три погляди на виставу</span>
+      <span class="rule"></span>
+      <span class="num text-[18px] text-wine">№ 04</span>
+    </div>
+
+    <div class="flex items-end justify-between gap-6 flex-wrap mb-10">
+      <h2 class="display text-[44px] lg:text-[80px] reveal max-w-[820px]">
+        Три постери. <span class="display-italic text-wine">Три погляди.</span>
+      </h2>
+      <p class="hand text-[22px] text-shadow max-w-[300px] reveal reveal-up-1">
+        ↘ обери ту афішу,<br/>яка тобі ближча
+      </p>
+    </div>
+
+    <div class="posters reveal reveal-up-2">
+      <figure class="poster">
+        <img loading="lazy" src="assets/banners/hitara.webp" alt="Постер «Кобза» — Брат Капранов з кобзою" />
+        <figcaption class="hand text-[20px] text-shadow mt-3">«Кобза. Брат — у центрі»</figcaption>
+      </figure>
+      <figure class="poster">
+        <img loading="lazy" src="assets/banners/terezi.webp" alt="Постер «Терези» — Барбара тримає терези" />
+        <figcaption class="hand text-[20px] text-shadow mt-3">«Терези. Хто кого важить»</figcaption>
+      </figure>
+      <figure class="poster">
+        <img loading="lazy" src="assets/banners/marionetki.webp" alt="Постер «Маріонетки»" />
+        <figcaption class="hand text-[20px] text-shadow mt-3">«Маріонетки. Голос керує»</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TEAM (cork board polaroids) ============== -->
+<section id="team" class="ink-bg py-24 lg:py-32 overflow-hidden" data-screen-label="04 Team">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="section-label mb-12 reveal" style="border-color:rgba(245,232,208,.18);">
+      <span class="act text-gold-hot">Акт III</span>
+      <span class="scene text-cream/60">Сцена · Команда</span>
+      <span class="rule" style="background:linear-gradient(90deg, var(--gold-hot), transparent);"></span>
+      <span class="num text-[18px] text-gold-hot">№ 05</span>
+    </div>
+
+    <div class="flex items-end justify-between flex-wrap gap-6 mb-10">
+      <h2 class="display text-cream text-[48px] lg:text-[88px] reveal max-w-[820px]">
+        Хто <span class="display-italic text-gold-hot">на сцені</span>.
+      </h2>
+      <p class="hand text-gold-hot text-[24px] max-w-[300px] reveal reveal-up-1 hidden md:block">
+        ↘ перетягни полароїди — вони знають своє місце
+      </p>
+    </div>
+
+    <!-- Cork board with draggable polaroids -->
+    <div class="cork cork-stack relative reveal reveal-up-2" id="cork" style="height: 640px;">
+      <!-- Polaroid 1: Brat Kapranov -->
+      <div class="polaroid" data-x="6%" data-y="10%" data-rot="-8" data-name="brat">
+        <span class="pin"></span>
+        <div class="photo">
+          <img src="assets/actors/2026-03-19_20-08-42_Mantach.webp" alt="Брат Капранов з кобзою" style="object-position: 50% 30%;" />
+        </div>
+        <div class="caption">Брат Капранов<br/><span style="font-size:18px; opacity:.6">кобза · вірші</span></div>
+      </div>
+
+      <!-- Polaroid 2: Roman Kolyada -->
+      <div class="polaroid" data-x="36%" data-y="22%" data-rot="3" data-name="roman">
+        <span class="pin" style="background: radial-gradient(circle at 35% 30%, #E8B850, #C9A24C 60%, #1A0F0A 100%);"></span>
+        <div class="photo">
+          <img src="assets/actors/_V3A9872.webp" alt="Роман Коляда з клавішною гітарою" style="object-position: 50% 25%;" />
+        </div>
+        <div class="caption">Роман Коляда<br/><span style="font-size:18px; opacity:.6">клавіши · кларнет · ударні</span></div>
+      </div>
+
+      <!-- Polaroid 3: Barbara Konon -->
+      <div class="polaroid" data-x="64%" data-y="12%" data-rot="-4" data-name="barbara">
+        <span class="pin" style="background: radial-gradient(circle at 35% 30%, #fff, #C8253A 50%, #1A0F0A 100%);"></span>
+        <div class="photo">
+          <img src="assets/actors/_V3A9679.webp" alt="Барбара Конон на сцені" style="object-position: 50% 22%;" />
+        </div>
+        <div class="caption">Барбара Конон<br/><span style="font-size:18px; opacity:.6">вокал · музика · вірші</span></div>
+      </div>
+
+      <!-- a little note pinned -->
+      <div class="absolute hidden md:block" style="left:16%; top:58%; transform: rotate(-7deg); width:220px; pointer-events:none;">
+        <div class="bg-paper p-4 hand text-[22px] text-ink leading-tight shadow-2xl" style="background:#F8EFD8;">
+          «Я не випадково тут — мене<br/>покликав <u>голос</u>.»
+          <div class="eyebrow text-wine mt-2">— з прослуховування</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- text bios -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+      <div class="reveal">
+        <div class="num text-[40px] text-gold-hot">01</div>
+        <div class="display text-cream text-[22px] mt-1">Брат Капранов</div>
+        <div class="font-body text-cream/65 text-[14px] mt-2">Кобза, музика, вірші. Той, хто стежить, щоб струни не йшли проти серця.</div>
+      </div>
+      <div class="reveal reveal-up-1">
+        <div class="num text-[40px] text-gold-hot">02</div>
+        <div class="display text-cream text-[22px] mt-1">Роман Коляда</div>
+        <div class="font-body text-cream/65 text-[14px] mt-2">Клавіши, ударні, кларнет, музика, вірші. Меломан, який вміє грати один за трьох.</div>
+      </div>
+      <div class="reveal reveal-up-2">
+        <div class="num text-[40px] text-gold-hot">03</div>
+        <div class="display text-cream text-[22px] mt-1">Барбара Конон</div>
+        <div class="font-body text-cream/65 text-[14px] mt-2">Вокал, музика, вірші. Голос вистави — і та сама слабка ланка для Романтика.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== QUOTES (torn paper) ============== -->
+<section id="quotes" class="paper-bg py-24 lg:py-32 overflow-hidden" data-screen-label="05 Quotes">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div class="section-label mb-10 reveal">
+      <span class="act">Акт IV</span>
+      <span class="scene">Сцена · Афоризми</span>
+      <span class="rule"></span>
+      <span class="num text-[18px] text-wine">№ 06</span>
+    </div>
+
+    <div class="flex items-end justify-between gap-6 flex-wrap mb-12">
+      <h2 class="display text-[48px] lg:text-[88px] reveal max-w-[820px]">
+        Дев'ять <span class="display-italic text-wine">таємних</span> файлів.
+      </h2>
+      <p class="hand text-[24px] text-shadow max-w-[300px] reveal reveal-up-1">
+        ↘ натисни «далі» —<br/>наступна цитата<br/>випливе на передній план
+      </p>
+    </div>
+
+    <!-- focused quote + thumbnails -->
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <!-- focus card -->
+      <div class="lg:col-span-7 relative h-[420px] lg:h-[500px] reveal reveal-up-2" id="quoteStage">
+        <!-- cards injected via JS clones for stage; we keep 3 visible (back, mid, front) -->
+      </div>
+
+      <!-- controls + thumb list -->
+      <div class="lg:col-span-5 reveal reveal-up-3">
+        <div class="flex items-center gap-3 mb-6">
+          <button id="qPrev" class="w-12 h-12 rounded-full border border-ink/40 hover:bg-ink hover:text-cream transition-colors" aria-label="Попередня цитата">←</button>
+          <button id="qNext" class="w-12 h-12 rounded-full border border-ink/40 hover:bg-ink hover:text-cream transition-colors" aria-label="Наступна цитата">→</button>
+          <span id="qCount" class="hand text-[22px] text-shadow ml-2">1 / 9</span>
+        </div>
+        <ol id="qList" class="space-y-3"></ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== BUY TICKETS CTA BAND ============== -->
+<section id="buy" class="wine-bg py-24 lg:py-32 relative overflow-hidden" data-screen-label="06 Buy">
+  <div class="absolute inset-0 pointer-events-none opacity-25" style="background-image:
+    radial-gradient(800px 400px at 80% 10%, var(--gold-hot), transparent 60%),
+    radial-gradient(600px 400px at 10% 90%, var(--peach), transparent 60%);"></div>
+
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 relative">
+    <div class="eyebrow text-gold-hot mb-6 reveal">Купити квитки</div>
+    <h2 class="display text-cream text-[64px] sm:text-[92px] lg:text-[140px] leading-[0.88] reveal reveal-up-1">
+      Приходь.<br/>
+      <span class="display-italic text-gold-hot">Посміємось разом.</span><br/>
+      Зустрінемось.
+    </h2>
+
+    <div class="grid lg:grid-cols-[1fr_auto] gap-10 items-end mt-14">
+      <div class="font-body text-cream/85 text-[18px] max-w-[640px] reveal reveal-up-2">
+        Квитки на 16 та 17 липня — у продажу. Оплата через wayforpay. Якщо хочеш бронь або корпоративну броню — пиши Віталію напряму.
+      </div>
+      <div class="flex flex-col sm:flex-row gap-3 reveal reveal-up-3">
+        <a href="https://secure.wayforpay.com" target="_blank" rel="noopener" class="btn btn-gold">Купити квитки →</a>
+        <a href="mailto:spokusa2@gmail.com" class="btn btn-ghost-cream">Написати організатору</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== GALLERY ============== -->
+<section id="gallery" class="cream-bg py-24 lg:py-32" data-screen-label="07 Gallery">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div class="section-label mb-10 reveal">
+      <span class="act">Акт V</span>
+      <span class="scene">Сцена · Закулісся</span>
+      <span class="rule"></span>
+      <span class="num text-[18px] text-wine">№ 07</span>
+    </div>
+
+    <div class="flex items-end justify-between gap-6 mb-10 flex-wrap">
+      <h2 class="display text-[48px] lg:text-[88px] reveal">Із залу <span class="display-italic text-wine">і з-поза лаштунків</span>.</h2>
+      <p class="hand text-[24px] text-shadow reveal reveal-up-1">наведи — і фото згадає свій колір</p>
+    </div>
+
+    <div class="mason reveal reveal-up-2" id="mason">
+      <!-- items injected via JS to keep file small; fallback below -->
+    </div>
+  </div>
+</section>
+
+<!-- ============== CONTACTS / FOOTER ============== -->
+<footer id="contacts" class="ink-bg pt-24 pb-12 relative" data-screen-label="08 Contacts">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+    <div class="grid lg:grid-cols-12 gap-12 items-start">
+      <div class="lg:col-span-7">
+        <div class="eyebrow text-gold-hot mb-6">Контакти</div>
+        <h2 class="display text-cream text-[44px] lg:text-[72px] leading-[.95]">
+          Спитати, замовити,<br/>сказати «дякую».
+        </h2>
+        <p class="hand text-gold-hot text-[28px] mt-4">— ми відповідаємо.</p>
+
+        <div class="grid sm:grid-cols-2 gap-6 mt-12">
+          <div>
+            <div class="eyebrow text-cream/55 mb-2">Особа для контакту</div>
+            <div class="display text-cream text-[24px]">Віталій Капранов</div>
+          </div>
+          <div>
+            <div class="eyebrow text-cream/55 mb-2">Email</div>
+            <a href="mailto:spokusa2@gmail.com" class="display-italic text-gold-hot text-[22px] underline-offset-4 hover:underline">spokusa2@gmail.com</a>
+          </div>
+          <div>
+            <div class="eyebrow text-cream/55 mb-2">Телефон</div>
+            <a href="tel:+380674662785" class="display text-cream text-[22px] hover:text-gold-hot">+380 67 466 27 85</a>
+          </div>
+          <div>
+            <div class="eyebrow text-cream/55 mb-2">Соцмережі</div>
+            <a href="https://www.facebook.com/profile.php?id=100078418107612" target="_blank" rel="noopener" class="display-italic text-gold-hot text-[22px] hover:underline underline-offset-4">Facebook ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="lg:col-span-5">
+        <div class="border border-cream/15 p-6 lg:p-8 paper-bg" style="background: rgba(245,232,208,.06);">
+          <div class="eyebrow text-gold-hot mb-3">Локація</div>
+          <div class="display text-cream text-[28px]">Магічний Кораблик</div>
+          <div class="font-body text-cream/70 mt-2">Київ, Гідропарк</div>
+
+          <div class="mt-6 aspect-[4/3] relative overflow-hidden border border-gold/40" style="box-shadow: inset 0 0 0 1px rgba(201,162,76,.25);">
+            <iframe
+              title="Карта · Магічний Кораблик, Гідропарк, Київ"
+              src="https://www.google.com/maps?q=%D0%9C%D0%B0%D0%B3%D1%96%D1%87%D0%BD%D0%B8%D0%B9+%D0%9A%D0%BE%D1%80%D0%B0%D0%B1%D0%BB%D0%B8%D0%BA+%D0%93%D1%96%D0%B4%D1%80%D0%BE%D0%BF%D0%B0%D1%80%D0%BA+%D0%9A%D0%B8%D1%97%D0%B2&z=15&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-full block"
+              style="border:0; filter: grayscale(.25) contrast(.95) brightness(.95);"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="flex items-center justify-between gap-3 mt-3">
+            <span class="eyebrow text-cream/55">Гідропарк · Київ</span>
+            <a href="https://www.google.com/maps/search/?api=1&query=%D0%9C%D0%B0%D0%B3%D1%96%D1%87%D0%BD%D0%B8%D0%B9+%D0%9A%D0%BE%D1%80%D0%B0%D0%B1%D0%BB%D0%B8%D0%BA+%D0%93%D1%96%D0%B4%D1%80%D0%BE%D0%BF%D0%B0%D1%80%D0%BA+%D0%9A%D0%B8%D1%97%D0%B2"
+               target="_blank" rel="noopener"
+               class="text-gold-hot text-[13px] underline-offset-4 hover:underline" style="letter-spacing:.18em; text-transform:uppercase;">
+              Прокласти маршрут ↗
+            </a>
+          </div>
+
+          <div class="font-body text-cream/70 text-[14px] mt-4">
+            Орієнтир — пристань на правому березі Гідропарку. Перед показом — фойє з фортепіано, відкривається за 30 хв.
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="mt-20 pt-8 border-t border-cream/15 grid sm:grid-cols-2 gap-6 items-end">
+      <div class="display text-cream text-[20px]" style="letter-spacing:.05em;">ТЕРИТОРІЯ <span class="display-italic text-gold-hot">ж</span>ІНКИ <span class="hand text-gold-hot text-[24px] ml-2">таємні файли</span></div>
+      <div class="font-body text-cream/55 text-[12px] sm:text-right">
+        © 2026 Музично-поетична формація «Територія Жінки». Сайт — для прес-показу, фінальний контент уточнюється.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============== STICKY CTA ============== -->
+<a href="https://secure.wayforpay.com" target="_blank" rel="noopener" class="sticky-cta btn btn-gold" id="stickyCta" style="box-shadow: 0 18px 40px -10px rgba(201,162,76,.85);">
+  <svg viewBox="0 0 16 16" class="w-3.5 h-3.5" fill="currentColor"><path d="M2 4 L14 4 L13 12 L3 12 Z"/></svg>
+  Квитки
+</a>
+
+<!-- ============== SOUND BUTTON ============== -->
+<button id="soundBtn" class="sound-btn" aria-label="Звук фону">
+  <svg id="soundIcon" viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6">
+    <path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8a5 5 0 0 1 0 8" stroke-dasharray="2 3"/>
+  </svg>
+</button>
+
+<!-- ============== SCRIPTS ============== -->
+<script>
+/* ===== Curtain ===== */
+window.addEventListener('load', () => {
+  const c = document.getElementById('curtain');
+  setTimeout(() => c.classList.add('open'), 800);
+  setTimeout(() => c.classList.remove('show'), 2400);
+});
+
+/* ===== Reveal on scroll ===== */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal, .kin').forEach(el => io.observe(el));
+
+/* ===== Nav scroll state ===== */
+const nav = document.getElementById('nav');
+const sticky = document.getElementById('stickyCta');
+let lastY = 0;
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  nav.classList.toggle('scrolled', y > 60);
+  sticky.classList.toggle('show', y > window.innerHeight * 0.8);
+  lastY = y;
+}, { passive: true });
+
+/* ===== Mobile menu ===== */
+document.getElementById('menuBtn').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+document.querySelectorAll('#mobileMenu a').forEach(a => a.addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.remove('open');
+}));
+
+/* ===== Hero spotlight (lerp follow cursor) ===== */
+(function(){
+  const hero = document.querySelector('.hero');
+  if(!hero) return;
+  let tx = 50, ty = 40, cx = 50, cy = 40;
+  let isTouch = matchMedia('(hover: none)').matches;
+
+  hero.addEventListener('pointermove', (e) => {
+    if(e.pointerType === 'touch') return;
+    const r = hero.getBoundingClientRect();
+    tx = ((e.clientX - r.left) / r.width) * 100;
+    ty = ((e.clientY - r.top) / r.height) * 100;
+  });
+
+  // Auto-drift cycle (mobile + default)
+  let t = 0;
+  function tick(){
+    if(isTouch || !document.hasFocus()){
+      t += 0.006;
+      tx = 50 + Math.cos(t * 0.7) * 22;
+      ty = 38 + Math.sin(t) * 14;
+    }
+    cx += (tx - cx) * 0.10;
+    cy += (ty - cy) * 0.10;
+    hero.style.setProperty('--mx', cx + '%');
+    hero.style.setProperty('--my', cy + '%');
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ===== Tickets scroll buttons ===== */
+(function(){
+  const track = document.getElementById('ticketsTrack');
+  if(!track) return;
+  const step = () => Math.min(track.clientWidth * 0.8, 440);
+  document.querySelectorAll('.ticket-prev').forEach(b => b.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' })));
+  document.querySelectorAll('.ticket-next').forEach(b => b.addEventListener('click', () => track.scrollBy({ left:  step(), behavior: 'smooth' })));
+})();
+
+/* ===== Quotes stage ===== */
+const QUOTES = [
+  "Впала долу сукня з декольте — значить, одягала недаремно!",
+  "Кожен цинік — це колишній романтик. Романтик секонд-хенд.",
+  "Не спи на роботі!",
+  "У музиці є дві головні ноти — До і Ля. Тому що разом вони — ДОЛЯ. І тому що між ними — СЕКСта.",
+  "Був би підданий — а королева знайдеться.",
+  "Це не в мене маленька трембіта — це ти просто не вмієш дудіти!",
+  "Відмовляти жінці — гріх! Відмовляти красивій жінці — смертний гріх!",
+  "Прекрасний я! Прекрасна! Пре-пре-пре-пре- аж пре! Кому не ясно?",
+  "Усім чоловікам одного треба. А точніше, одної — тебе!"
+];
+(function(){
+  const stage = document.getElementById('quoteStage');
+  const list = document.getElementById('qList');
+  const counter = document.getElementById('qCount');
+  if(!stage) return;
+
+  let idx = 0;
+
+  // build list
+  list.innerHTML = QUOTES.map((q,i) => `
+    <li>
+      <button class="q-thumb w-full text-left flex items-baseline gap-3 py-2 border-b border-ink/12 hover:bg-ink/5 transition-colors group" data-i="${i}">
+        <span class="num text-wine text-[14px] w-8">${String(i+1).padStart(2,'0')}</span>
+        <span class="font-body text-[15px] leading-snug text-ink/85 group-hover:text-ink">${q.length > 70 ? q.slice(0,70) + '…' : q}</span>
+      </button>
+    </li>
+  `).join('');
+
+  // render stage cards
+  function render(){
+    stage.innerHTML = '';
+    const offsets = [-1, 0, 1]; // back, mid, front -> mid is current
+    offsets.forEach((o, k) => {
+      const i = (idx + o + QUOTES.length) % QUOTES.length;
+      const isFront = o === 0;
+      const card = document.createElement('div');
+      card.className = 'quote-card absolute inset-x-0';
+      const rot = o === -1 ? -8 : o === 1 ? 7 : -2;
+      const tx = o === -1 ? -30 : o === 1 ? 30 : 0;
+      const sc = o === 0 ? 1 : .88;
+      const opa = o === 0 ? 1 : .5;
+      const z = isFront ? 30 : 10;
+      card.style.cssText = `top: 5%; left: 8%; right: 8%; transform: translateX(${tx}px) rotate(${rot}deg) scale(${sc}); opacity: ${opa}; z-index: ${z}; transition: transform .6s cubic-bezier(.2,.7,.2,1), opacity .5s ease;`;
+      card.innerHTML = `
+        <div class="flex items-baseline justify-between mb-4">
+          <span class="quote-num">№ ${String(i+1).padStart(2,'0')} / 09</span>
+          <span class="hand text-[20px] text-shadow">з вистави</span>
+        </div>
+        <p class="quote-text">${QUOTES[i].replace(/—/g,'<span class="red">—</span>')}</p>
+        <div class="mt-6 hand text-[20px] text-shadow">${i === 1 ? '— Лабух' : i === 4 ? '— Романтик' : '— Співачка'}</div>
+      `;
+      stage.appendChild(card);
+    });
+    counter.textContent = `${idx+1} / ${QUOTES.length}`;
+    list.querySelectorAll('.q-thumb').forEach((b,i) => {
+      b.classList.toggle('text-wine', i === idx);
+      b.classList.toggle('bg-ink/5', i === idx);
+    });
+  }
+  render();
+
+  document.getElementById('qNext').addEventListener('click', () => { idx = (idx + 1) % QUOTES.length; render(); });
+  document.getElementById('qPrev').addEventListener('click', () => { idx = (idx - 1 + QUOTES.length) % QUOTES.length; render(); });
+  list.addEventListener('click', (e) => {
+    const b = e.target.closest('.q-thumb');
+    if(!b) return;
+    idx = parseInt(b.dataset.i, 10); render();
+  });
+})();
+
+/* ===== Polaroid drag ===== */
+(function(){
+  const cork = document.getElementById('cork');
+  if(!cork) return;
+  const polaroids = cork.querySelectorAll('.polaroid');
+  const isMobile = () => window.matchMedia('(max-width: 720px)').matches;
+
+  function place(p){
+    if(isMobile()){
+      // clear absolute positioning so CSS stack layout takes over
+      p.style.left = ''; p.style.top = ''; p.style.transform = '';
+      return;
+    }
+    const xPct = parseFloat(p.dataset.x); const yPct = parseFloat(p.dataset.y);
+    p.style.left = (xPct) + '%';
+    p.style.top  = (yPct) + '%';
+    p.style.transform = `rotate(${p.dataset.rot}deg)`;
+    p.dataset.homeRot = p.dataset.rot;
+  }
+  polaroids.forEach(place);
+  window.addEventListener('resize', () => polaroids.forEach(place));
+
+  polaroids.forEach(p => {
+    let startX, startY, origX, origY, dragging = false;
+    p.addEventListener('pointerdown', (e) => {
+      if(isMobile()) return; // no drag on mobile
+      dragging = true;
+      p.setPointerCapture(e.pointerId);
+      p.classList.add('drag');
+      const r = p.getBoundingClientRect();
+      startX = e.clientX; startY = e.clientY;
+      origX = r.left; origY = r.top;
+      p.style.transition = 'none';
+      p.style.transform = `rotate(${(parseFloat(p.dataset.rot) || 0) * 0.3}deg)`;
+    });
+    p.addEventListener('pointermove', (e) => {
+      if(!dragging) return;
+      const dx = e.clientX - startX; const dy = e.clientY - startY;
+      const cr = cork.getBoundingClientRect();
+      const x = origX - cr.left + dx;
+      const y = origY - cr.top + dy;
+      p.style.left = (x / cr.width * 100) + '%';
+      p.style.top  = (y / cr.height * 100) + '%';
+    });
+    function release(e){
+      if(!dragging) return;
+      dragging = false; p.classList.remove('drag');
+      p.style.transition = 'left .6s cubic-bezier(.34,1.56,.64,1), top .6s cubic-bezier(.34,1.56,.64,1), transform .6s cubic-bezier(.34,1.56,.64,1)';
+      // spring back home
+      p.style.left = p.dataset.x;
+      p.style.top  = p.dataset.y;
+      p.style.transform = `rotate(${p.dataset.homeRot}deg)`;
+    }
+    p.addEventListener('pointerup', release);
+    p.addEventListener('pointercancel', release);
+  });
+})();
+
+/* ===== Gallery backstage inject ===== */
+(function(){
+  const m = document.getElementById('mason');
+  if(!m) return;
+  const photos = [
+    ['assets/out-photo/_V3A9429.webp',                   '«У променях рампи»'],
+    ['assets/out-photo/2026-03-19_20-01-30_Mantach.webp', '«Кобза. Перші акорди»'],
+    ['assets/out-photo/_V3A9540.webp',                   '«Дует біля мікрофону»'],
+    ['assets/out-photo/2026-03-19_20-03-49_Mantach.webp', '«Сцена і завіса»'],
+    ['assets/out-photo/_V3A9573.webp',                   '«Між куплетами»'],
+    ['assets/out-photo/2026-03-19_20-10-34_Mantach.webp', '«Останній акорд»']
+  ];
+  m.innerHTML = photos.map(([src, cap], i) => `
+    <figure class="mason-item">
+      <div class="relative">
+        <img loading="lazy" src="${src}" alt="${cap}" />
+        <span class="tape" style="top:-10px; left:50%; transform: translateX(-50%) rotate(${(i*5)%9-4}deg);"></span>
+      </div>
+      <figcaption class="hand text-[20px] text-shadow mt-2">${cap}</figcaption>
+    </figure>
+  `).join('');
+})();
+
+/* ===== Trailer play overlay ===== */
+(function(){
+  const v = document.getElementById('trailerVideo');
+  const b = document.getElementById('playBtn');
+  if(!v || !b) return;
+  b.addEventListener('click', () => {
+    b.style.transition = 'opacity .4s ease';
+    b.style.opacity = '0';
+    v.play().catch(()=>{});
+    setTimeout(() => { b.style.display = 'none'; }, 400);
+  });
+  v.addEventListener('pause', () => {
+    if(v.ended){ b.style.display = 'flex'; b.style.opacity = '1'; }
+  });
+})();
+
+/* ===== Hero video mute toggle ===== */
+(function(){
+  const v = document.getElementById('heroVideo');
+  const b = document.getElementById('heroMute');
+  if(!v || !b) return;
+  v.muted = true;
+  function render(){
+    b.querySelector('#muteIcon').innerHTML = v.muted
+      ? '<path d="M4 9 H8 L13 4 V20 L8 15 H4 Z"/><path d="M17 9 L21 13 M21 9 L17 13" stroke="currentColor" stroke-width="1.8" fill="none"/>'
+      : '<path d="M4 9 H8 L13 4 V20 L8 15 H4 Z"/><path d="M17 8 a5 5 0 0 1 0 8 M19 6 a8 8 0 0 1 0 12" stroke="currentColor" stroke-width="1.8" fill="none"/>';
+  }
+  b.addEventListener('click', () => { v.muted = !v.muted; if(!v.muted){ v.play().catch(()=>{}); } render(); });
+  render();
+})();
+
+/* ===== Sound (placeholder mute toggle — no audio file loaded) ===== */
+(function(){
+  const b = document.getElementById('soundBtn');
+  let on = false;
+  b.addEventListener('click', () => {
+    on = !on;
+    b.style.color = on ? 'var(--gold-hot)' : 'rgba(245,232,208,.4)';
+    // No actual audio attached — placeholder
+  });
+  b.style.color = 'rgba(245,232,208,.4)';
+})();
+</script>
+
+</body>
+</html>
