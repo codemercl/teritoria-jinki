@@ -679,6 +679,12 @@ body::before{
   backdrop-filter: blur(10px);
   box-shadow: 0 1px 0 rgba(201,162,76,.3);
 }
+/* mobile: bare transparent header (logo + burger only), no valance */
+@media (max-width: 767px){
+  .stage-valance{ display:none; }
+  .nav{ top: 0; }
+  .nav.scrolled{ background: transparent; backdrop-filter: none; box-shadow: none; }
+}
 .nav a.ul-hover{ position:relative; }
 .nav a.ul-hover::after{ content:""; position:absolute; left:0; right:0; bottom:-6px; height:1px; background:currentColor; transform: scaleX(0); transform-origin:left; transition: transform .25s ease; }
 .nav a.ul-hover:hover::after{ transform: scaleX(1); }
@@ -821,7 +827,7 @@ html.reduce-anim .hero-dim{ display:none; }
       <a class="ul-hover" href="#gallery">Закулісся</a>
       <a class="ul-hover" href="#contacts">Контакти</a>
     </nav>
-    <a href="https://secure.wayforpay.com" target="_blank" rel="noopener" class="btn btn-gold hidden sm:inline-flex" style="padding: 12px 22px; min-height:42px;">Квитки</a>
+    <a href="https://secure.wayforpay.com" target="_blank" rel="noopener" class="btn btn-gold hidden md:inline-flex" style="padding: 12px 22px; min-height:42px;">Квитки</a>
     <button id="menuBtn" class="md:hidden relative z-[80] inline-flex items-center justify-center w-11 h-11 rounded-full border border-gold-hot/40 text-gold-hot bg-ink/70 backdrop-blur-md" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu">
       <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
         <line class="l1" x1="4" y1="7"  x2="20" y2="7"/>
