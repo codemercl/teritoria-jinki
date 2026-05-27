@@ -4,13 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Територія Жінки. Таємні файли — Музично-поетична формація</title>
-<meta name="description" content="Романтична музична комедія братів Капранових з живим звуком. Прем'єра 19 березня 2026. Найближчі покази 16 та 17 липня — Гідропарк, «Магічний Кораблик»." />
+<meta name="description" content="Романтична музична комедія братів Капранових з живим звуком. Найближчий показ — 16 липня, Гідропарк, «Магічний Кораблик»." />
 <meta name="theme-color" content="#1A0F0A" />
 
 <!-- OG -->
 <meta property="og:type" content="event" />
 <meta property="og:title" content="Територія Жінки. Таємні файли" />
-<meta property="og:description" content="Романтична музична комедія братів Капранових. Київ, Гідропарк, Магічний Кораблик. 16 та 17 липня 2026." />
+<meta property="og:description" content="Романтична музична комедія братів Капранових. Київ, Гідропарк, Магічний Кораблик. 16 липня 2026." />
 
 <!-- JSON-LD -->
 <script type="application/ld+json">
@@ -639,15 +639,6 @@ body::before{
 .mason-item img{ width:100%; display:block; filter: sepia(.32) saturate(1.05) contrast(.96) brightness(.96); transition: filter .5s ease, transform .6s cubic-bezier(.2,.7,.2,1); box-shadow: 0 22px 50px -20px rgba(0,0,0,.45), 0 4px 12px rgba(0,0,0,.18); }
 .mason-item:hover img{ filter:none; transform: translateY(-3px); }
 
-/* === POSTERS strip === */
-.posters{ display:grid; grid-template-columns: 1fr; gap: 28px; }
-@media(min-width: 768px){ .posters{ grid-template-columns: repeat(3, 1fr); gap: 32px; } }
-.poster{ position:relative; transition: transform .5s cubic-bezier(.2,.7,.2,1); }
-.poster:nth-child(1){ transform: rotate(-1.5deg); }
-.poster:nth-child(2){ transform: rotate(.8deg); }
-.poster:nth-child(3){ transform: rotate(-.6deg); }
-.poster:hover{ transform: rotate(0) translateY(-6px); }
-.poster img{ width:100%; display:block; aspect-ratio: 3/4.2; object-fit:cover; box-shadow: 0 32px 70px -20px rgba(0,0,0,.55), 0 6px 14px rgba(0,0,0,.2); }
 
 /* === CINEMA frame for trailer === */
 .cinema{
@@ -701,6 +692,13 @@ body::before{
 /* misc */
 .divider-row{ display:flex; align-items:center; gap:1rem; }
 .divider-row::before, .divider-row::after{ content:""; flex:1; height:1px; background:linear-gradient(90deg, transparent, rgba(26,15,10,.3), transparent); }
+
+/* hero mute attention pulse — drops once user toggles */
+@keyframes heroMutePulse{
+  0%,100%{ box-shadow: 0 10px 30px -6px rgba(232,184,80,.5), 0 0 0 0 rgba(232,184,80,.65); }
+  50%   { box-shadow: 0 14px 36px -6px rgba(232,184,80,.75), 0 0 0 12px rgba(232,184,80,0); }
+}
+.hero-mute-pulse{ animation: heroMutePulse 2.4s ease-in-out infinite; }
 
 /* sound button */
 .sound-btn{
@@ -822,7 +820,6 @@ html.reduce-anim .hero-dim{ display:none; }
     <nav class="hidden md:flex items-center gap-7 text-[13px] font-medium" style="letter-spacing:.12em; text-transform:uppercase;">
       <a class="ul-hover" href="#trailer">Трейлер</a>
       <a class="ul-hover" href="#afisha">Афіша</a>
-      <a class="ul-hover" href="#posters">Постери</a>
       <a class="ul-hover" href="#team">Команда</a>
       <a class="ul-hover" href="#quotes">Цитати</a>
       <a class="ul-hover" href="#gallery">Закулісся</a>
@@ -850,11 +847,10 @@ html.reduce-anim .hero-dim{ display:none; }
   <nav class="mm-list">
     <a class="mm-link" href="#trailer"   style="animation-delay:.10s"><span class="mm-num">01</span>Трейлер</a>
     <a class="mm-link" href="#afisha"    style="animation-delay:.16s"><span class="mm-num">02</span>Афіша</a>
-    <a class="mm-link" href="#posters"   style="animation-delay:.22s"><span class="mm-num">03</span>Постери</a>
-    <a class="mm-link" href="#team"      style="animation-delay:.28s"><span class="mm-num">04</span>Команда</a>
-    <a class="mm-link" href="#quotes"    style="animation-delay:.34s"><span class="mm-num">05</span>Цитати</a>
-    <a class="mm-link" href="#gallery"   style="animation-delay:.40s"><span class="mm-num">06</span>Закулісся</a>
-    <a class="mm-link" href="#contacts"  style="animation-delay:.46s"><span class="mm-num">07</span>Контакти</a>
+    <a class="mm-link" href="#team"      style="animation-delay:.22s"><span class="mm-num">03</span>Команда</a>
+    <a class="mm-link" href="#quotes"    style="animation-delay:.28s"><span class="mm-num">04</span>Цитати</a>
+    <a class="mm-link" href="#gallery"   style="animation-delay:.34s"><span class="mm-num">05</span>Закулісся</a>
+    <a class="mm-link" href="#contacts"  style="animation-delay:.40s"><span class="mm-num">06</span>Контакти</a>
   </nav>
   <div class="mm-foot">
     <a href="https://secure.wayforpay.com/payment/sc8c15c8324ec" target="_blank" rel="noopener" class="btn btn-gold w-full sm:w-auto">Купити квитки →</a>
@@ -887,9 +883,6 @@ html.reduce-anim .hero-dim{ display:none; }
         Музично-поетична формація · Київ · 2026
       </div>
       <div class="hidden sm:flex items-center gap-3 text-[11px] text-cream/65" style="letter-spacing:.16em; text-transform:uppercase;">
-        <span>Прем'єра</span>
-        <span class="num text-gold-hot text-[18px]">19.03</span>
-        <span class="opacity-30">|</span>
         <span>Гідропарк · Магічний Кораблик</span>
       </div>
     </div>
@@ -953,7 +946,7 @@ html.reduce-anim .hero-dim{ display:none; }
           </svg>
           <div class="text-left flex-1">
             <div class="hero-cta-label">Афіша</div>
-            <div class="hero-cta-sub">16 · 17 липня</div>
+            <div class="hero-cta-sub">16 липня</div>
           </div>
           <span class="hero-cta-arrow">→</span>
         </div>
@@ -961,9 +954,10 @@ html.reduce-anim .hero-dim{ display:none; }
     </div>
   </div>
 
-  <!-- mute toggle on video -->
-  <button id="heroMute" class="absolute z-[5] bottom-4 right-4 sm:bottom-6 sm:right-6 w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-gold-hot/40 text-gold-hot bg-ink/60 backdrop-blur-md flex items-center justify-center hover:bg-gold-hot hover:text-ink transition-colors" aria-label="Звук відео">
-    <svg id="muteIcon" viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M4 9 H8 L13 4 V20 L8 15 H4 Z"/><path d="M17 9 L21 13 M21 9 L17 13" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+  <!-- mute toggle on video — large, labeled, attention-pulsing -->
+  <button id="heroMute" class="absolute z-[5] bottom-4 right-4 sm:bottom-6 sm:right-6 inline-flex items-center gap-2 pl-3 pr-4 h-11 sm:h-12 rounded-full border-2 border-gold-hot text-ink bg-gold-hot shadow-[0_10px_30px_-6px_rgba(232,184,80,.65)] hover:bg-gold transition-colors hero-mute-pulse" aria-label="Увімкнути звук відео">
+    <svg id="muteIcon" viewBox="0 0 24 24" class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor"><path d="M4 9 H8 L13 4 V20 L8 15 H4 Z"/><path d="M17 9 L21 13 M21 9 L17 13" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+    <span id="muteLabel" class="text-[12px] font-semibold tracking-[.16em] uppercase">Звук</span>
   </button>
 </section>
 
@@ -972,14 +966,14 @@ html.reduce-anim .hero-dim{ display:none; }
 <!-- ============== MARQUEE ============== -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Прем'єра · 19 березня 2026</span><span class="sep">✦</span>
+    <span>Найближчий показ · 16 липня 2026</span><span class="sep">✦</span>
     <span>Романтична музична комедія</span><span class="sep">✦</span>
     <span>Брати Капранови</span><span class="sep">✦</span>
     <span>Live music</span><span class="sep">✦</span>
     <span>18+</span><span class="sep">✦</span>
     <span>Гідропарк · Магічний Кораблик</span><span class="sep">✦</span>
     <!-- dup -->
-    <span>Прем'єра · 19 березня 2026</span><span class="sep">✦</span>
+    <span>Найближчий показ · 16 липня 2026</span><span class="sep">✦</span>
     <span>Романтична музична комедія</span><span class="sep">✦</span>
     <span>Брати Капранови</span><span class="sep">✦</span>
     <span>Live music</span><span class="sep">✦</span>
@@ -999,16 +993,15 @@ html.reduce-anim .hero-dim{ display:none; }
     </div>
 
     <div class="text-center mb-10 reveal reveal-up-1">
-      <h2 class="display text-cream text-[56px] lg:text-[88px]">Трейлер вистави</h2>
-      <p class="hand text-gold-hot text-[28px] mt-2">— перший погляд.</p>
+      <h2 class="display text-cream text-[56px] lg:text-[88px]">Перший погляд</h2>
     </div>
 
     <div class="cinema max-w-[1080px] mx-auto reveal reveal-up-2" id="cinemaFrame">
       <video
         id="trailerVideo"
         class="absolute inset-0 w-full h-full object-cover bg-black"
-        src="assets/trailer.webm"
-        preload="metadata"
+        data-src="assets/trailer.webm"
+        preload="none"
         playsinline
         controls
         poster="assets/trailer-poster.webp"></video>
@@ -1050,10 +1043,10 @@ html.reduce-anim .hero-dim{ display:none; }
 
     <div class="flex items-end justify-between flex-wrap gap-6 mb-8">
       <h2 class="display text-[48px] lg:text-[88px] reveal max-w-[820px]">
-        Три квитки.<br/><span class="display-italic text-wine">Тільки в Києві.</span>
+        Найближчий показ.<br/><span class="display-italic text-wine">Тільки в Києві.</span>
       </h2>
       <div class="hand text-[24px] text-shadow max-w-[280px] reveal reveal-up-1">
-        ↘ потягни вбік або<br/>обери дату нижче
+        ↘ обери дату нижче
       </div>
     </div>
   </div>
@@ -1061,38 +1054,13 @@ html.reduce-anim .hero-dim{ display:none; }
   <!-- horizontal tickets track -->
   <div class="relative reveal reveal-up-2">
     <div class="tickets-track" id="ticketsTrack" tabindex="0" aria-label="Афіша показів — горизонтальний скрол">
-      <!-- TICKET 1 — Premiere -->
-      <article class="ticket">
-        <div class="ticket-paper">
-          <div class="flex items-start justify-between">
-            <div>
-              <div class="eyebrow text-wine">Прем'єра</div>
-              <div class="hand text-[28px] text-shadow leading-none mt-1">№ 001</div>
-            </div>
-            <div class="stamp" style="transform: rotate(8deg); color:var(--wine); border-color:var(--wine);">Sold out</div>
-          </div>
-          <div class="num text-[120px] leading-[.78] text-wine">19<span class="text-[40px] align-top">·03</span></div>
-          <div class="display text-[28px]">Четвер, <span class="display-italic">19:00</span></div>
-          <div class="font-body text-shadow text-[14px]">Гідропарк · Магічний Кораблик</div>
-          <div class="ticket-stub">
-            <div class="flex items-baseline justify-between">
-              <div>
-                <div class="eyebrow text-wine">Місць немає</div>
-                <div class="hand text-[20px] text-shadow">«перший раз — як перший поцілунок»</div>
-              </div>
-              <div class="num text-[28px] text-wine">— —</div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- TICKET 2 — 16.07 -->
+      <!-- TICKET — 16.07 -->
       <article class="ticket">
         <div class="ticket-paper">
           <div class="flex items-start justify-between">
             <div>
               <div class="eyebrow text-wine">Літо · показ</div>
-              <div class="hand text-[28px] text-shadow leading-none mt-1">№ 002</div>
+              <div class="hand text-[28px] text-shadow leading-none mt-1">№ 001</div>
             </div>
             <div class="stamp" style="transform: rotate(-6deg); color:var(--gold-hot); border-color:var(--gold-hot); background:var(--wine);">Available</div>
           </div>
@@ -1111,31 +1079,6 @@ html.reduce-anim .hero-dim{ display:none; }
         </div>
       </article>
 
-      <!-- TICKET 3 — 17.07 (sale not yet open) -->
-      <article class="ticket">
-        <div class="ticket-paper">
-          <div class="flex items-start justify-between">
-            <div>
-              <div class="eyebrow text-wine">Літо · показ</div>
-              <div class="hand text-[28px] text-shadow leading-none mt-1">№ 003</div>
-            </div>
-            <div class="stamp" style="transform: rotate(8deg); color:var(--wine); border-color:var(--wine);">Незабаром</div>
-          </div>
-          <div class="num text-[120px] leading-[.78] text-wine">17<span class="text-[40px] align-top">·07</span></div>
-          <div class="display text-[28px]">П'ятниця, <span class="display-italic">19:00</span></div>
-          <div class="font-body text-shadow text-[14px]">Гідропарк · Магічний Кораблик</div>
-          <div class="ticket-stub">
-            <div class="flex items-baseline justify-between">
-              <div>
-                <div class="eyebrow text-wine">Продаж скоро</div>
-                <div class="hand text-[20px] text-shadow">«не поспішай — встигнеш»</div>
-              </div>
-              <div class="num text-[28px] text-wine">— —</div>
-            </div>
-          </div>
-        </div>
-      </article>
-
       <!-- TICKET 4 — coming soon -->
       <article class="ticket">
         <div class="ticket-paper" style="background:
@@ -1144,7 +1087,7 @@ html.reduce-anim .hero-dim{ display:none; }
           <div class="flex items-start justify-between">
             <div>
               <div class="eyebrow text-wine">Восени</div>
-              <div class="hand text-[28px] text-shadow leading-none mt-1">№ 004…</div>
+              <div class="hand text-[28px] text-shadow leading-none mt-1">№ 002…</div>
             </div>
             <div class="stamp" style="transform: rotate(8deg); color:var(--ink); border-color:var(--ink);">Soon</div>
           </div>
@@ -1169,42 +1112,6 @@ html.reduce-anim .hero-dim{ display:none; }
   </div>
 </section>
 
-<!-- ============== POSTERS (concept afishas) ============== -->
-<section id="posters" class="paper-bg pt-4 pb-24 lg:pb-32" data-screen-label="03a Posters">
-  <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
-    <div class="section-label mb-10 reveal">
-      <span class="act">Інтермедія</span>
-      <span class="scene">Три погляди на виставу</span>
-      <span class="rule"></span>
-      <span class="num text-[18px] text-wine">№ 04</span>
-    </div>
-
-    <div class="flex items-end justify-between gap-6 flex-wrap mb-10">
-      <h2 class="display text-[44px] lg:text-[80px] reveal max-w-[820px]">
-        Три постери. <span class="display-italic text-wine">Три погляди.</span>
-      </h2>
-      <p class="hand text-[22px] text-shadow max-w-[300px] reveal reveal-up-1">
-        ↘ обери ту афішу,<br/>яка тобі ближча
-      </p>
-    </div>
-
-    <div class="posters reveal reveal-up-2">
-      <figure class="poster">
-        <img loading="lazy" src="assets/banners/hitara.webp" alt="Постер «Кобза» — Брат Капранов з кобзою" />
-        <figcaption class="hand text-[20px] text-shadow mt-3">«Кобза. Брат — у центрі»</figcaption>
-      </figure>
-      <figure class="poster">
-        <img loading="lazy" src="assets/banners/terezi.webp" alt="Постер «Терези» — Барбара тримає терези" />
-        <figcaption class="hand text-[20px] text-shadow mt-3">«Терези. Хто кого важить»</figcaption>
-      </figure>
-      <figure class="poster">
-        <img loading="lazy" src="assets/banners/marionetki.webp" alt="Постер «Маріонетки»" />
-        <figcaption class="hand text-[20px] text-shadow mt-3">«Маріонетки. Голос керує»</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
 <!-- ============== TEAM (cork board polaroids) ============== -->
 <section id="team" class="ink-bg py-24 lg:py-32 overflow-hidden" data-screen-label="04 Team">
   <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
@@ -1217,7 +1124,7 @@ html.reduce-anim .hero-dim{ display:none; }
 
     <div class="flex items-end justify-between flex-wrap gap-6 mb-10">
       <h2 class="display text-cream text-[48px] lg:text-[88px] reveal max-w-[820px]">
-        Хто <span class="display-italic text-gold-hot">на сцені</span>.
+        <span class="display-italic text-gold-hot">На сцені</span>.
       </h2>
       <p class="hand text-gold-hot text-[24px] max-w-[300px] reveal reveal-up-1 hidden md:block">
         ↘ перетягни полароїди — вони знають своє місце
@@ -1253,31 +1160,24 @@ html.reduce-anim .hero-dim{ display:none; }
         <div class="caption">Барбара Конон<br/><span style="font-size:18px; opacity:.6">вокал · музика · вірші</span></div>
       </div>
 
-      <!-- a little note pinned -->
-      <div class="absolute hidden md:block" style="left:16%; top:58%; transform: rotate(-7deg); width:220px; pointer-events:none;">
-        <div class="bg-paper p-4 hand text-[22px] text-ink leading-tight shadow-2xl" style="background:#F8EFD8;">
-          «Я не випадково тут — мене<br/>покликав <u>голос</u>.»
-          <div class="eyebrow text-wine mt-2">— з прослуховування</div>
-        </div>
-      </div>
     </div>
 
     <!-- text bios -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
       <div class="reveal">
-        <div class="num text-[40px] text-gold-hot">01</div>
-        <div class="display text-cream text-[22px] mt-1">Брат Капранов</div>
-        <div class="font-body text-cream/65 text-[14px] mt-2">Кобза, музика, вірші. Той, хто стежить, щоб струни не йшли проти серця.</div>
+        <div class="display text-cream text-[26px]">Брат Капранов</div>
+        <div class="display-italic text-gold-hot text-[18px] mt-1">Старий Лабух</div>
+        <div class="font-body text-cream/65 text-[14px] mt-3">Кобза, вокал, музика, вірші. Той, хто керує струнами ваших сердець. Ласий до жінок.</div>
       </div>
       <div class="reveal reveal-up-1">
-        <div class="num text-[40px] text-gold-hot">02</div>
-        <div class="display text-cream text-[22px] mt-1">Роман Коляда</div>
-        <div class="font-body text-cream/65 text-[14px] mt-2">Клавіши, ударні, кларнет, музика, вірші. Меломан, який вміє грати один за трьох.</div>
+        <div class="display text-cream text-[26px]">Роман Коляда</div>
+        <div class="display-italic text-gold-hot text-[18px] mt-1">Романтик</div>
+        <div class="font-body text-cream/65 text-[14px] mt-3">Клавіші, перкусія, музика, вірші. Відповідальний за світову гармонію. Легка здобич.</div>
       </div>
       <div class="reveal reveal-up-2">
-        <div class="num text-[40px] text-gold-hot">03</div>
-        <div class="display text-cream text-[22px] mt-1">Барбара Конон</div>
-        <div class="font-body text-cream/65 text-[14px] mt-2">Вокал, музика, вірші. Голос вистави — і та сама слабка ланка для Романтика.</div>
+        <div class="display text-cream text-[26px]">Барбара Конон</div>
+        <div class="display-italic text-gold-hot text-[18px] mt-1">Дебютантка</div>
+        <div class="font-body text-cream/65 text-[14px] mt-3">Вокал, музика, вірші. Теплий голос, який зігріває душу. Характер з перчиком.</div>
       </div>
     </div>
   </div>
@@ -1338,11 +1238,11 @@ html.reduce-anim .hero-dim{ display:none; }
 
     <div class="grid lg:grid-cols-[1fr_auto] gap-10 items-end mt-14">
       <div class="font-body text-cream/85 text-[18px] max-w-[640px] reveal reveal-up-2">
-        Квитки на 16 та 17 липня — у продажу. Оплата через wayforpay. Якщо хочеш бронь або корпоративну броню — пиши Віталію напряму.
+        Квиток на 16 липня — у продажу. Оплата через wayforpay. Якщо хочеш бронь або корпоративну броню — пиши на мейл <a href="mailto:spokusa2@gmail.com?subject=%D0%91%D1%80%D0%BE%D0%BD%D1%8C%20%E2%80%94%20%D0%A2%D0%B5%D1%80%D0%B8%D1%82%D0%BE%D1%80%D1%96%D1%8F%20%D0%96%D1%96%D0%BD%D0%BA%D0%B8" class="text-gold-hot underline-offset-4 hover:underline">spokusa2@gmail.com</a>.
       </div>
       <div class="flex flex-col sm:flex-row gap-3 reveal reveal-up-3">
         <a href="https://secure.wayforpay.com/payment/sc8c15c8324ec" target="_blank" rel="noopener" class="btn btn-gold">Купити квитки →</a>
-        <a href="mailto:spokusa2@gmail.com" class="btn btn-ghost-cream">Написати організатору</a>
+        <a id="organizerEmailBtn" href="mailto:spokusa2@gmail.com?subject=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%BD%D1%8F%20%E2%80%94%20%D0%A2%D0%B5%D1%80%D0%B8%D1%82%D0%BE%D1%80%D1%96%D1%8F%20%D0%96%D1%96%D0%BD%D0%BA%D0%B8" data-email="spokusa2@gmail.com" class="btn btn-ghost-cream">Написати організатору</a>
       </div>
     </div>
   </div>
@@ -1360,7 +1260,6 @@ html.reduce-anim .hero-dim{ display:none; }
 
     <div class="flex items-end justify-between gap-6 mb-10 flex-wrap">
       <h2 class="display text-[48px] lg:text-[88px] reveal">Із залу <span class="display-italic text-wine">і з-поза лаштунків</span>.</h2>
-      <p class="hand text-[24px] text-shadow reveal reveal-up-1">наведи — і фото згадає свій колір</p>
     </div>
 
     <div class="mason reveal reveal-up-2" id="mason">
@@ -1380,11 +1279,7 @@ html.reduce-anim .hero-dim{ display:none; }
         </h2>
         <p class="hand text-gold-hot text-[28px] mt-4">— ми відповідаємо.</p>
 
-        <div class="grid sm:grid-cols-2 gap-6 mt-12">
-          <div>
-            <div class="eyebrow text-cream/55 mb-2">Особа для контакту</div>
-            <div class="display text-cream text-[24px]">Віталій Капранов</div>
-          </div>
+        <div class="grid sm:grid-cols-3 gap-6 mt-12">
           <div>
             <div class="eyebrow text-cream/55 mb-2">Email</div>
             <a href="mailto:spokusa2@gmail.com" class="display-italic text-gold-hot text-[22px] underline-offset-4 hover:underline">spokusa2@gmail.com</a>
@@ -1681,30 +1576,82 @@ const QUOTES = [
   const m = document.getElementById('mason');
   if(!m) return;
   const photos = [
-    ['assets/out-photo/_V3A9429.webp',                   '«У променях рампи»'],
-    ['assets/out-photo/2026-03-19_20-01-30_Mantach.webp', '«Кобза. Перші акорди»'],
-    ['assets/out-photo/_V3A9540.webp',                   '«Дует біля мікрофону»'],
-    ['assets/out-photo/2026-03-19_20-03-49_Mantach.webp', '«Сцена і завіса»'],
-    ['assets/out-photo/_V3A9573.webp',                   '«Між куплетами»'],
-    ['assets/out-photo/2026-03-19_20-10-34_Mantach.webp', '«Останній акорд»']
+    'assets/out-photo/_V3A9429.webp',
+    'assets/out-photo/2026-03-19_20-01-30_Mantach.webp',
+    'assets/out-photo/_V3A9540.webp',
+    'assets/out-photo/2026-03-19_20-03-49_Mantach.webp',
+    'assets/out-photo/_V3A9573.webp',
+    'assets/out-photo/2026-03-19_20-10-34_Mantach.webp'
   ];
-  m.innerHTML = photos.map(([src, cap], i) => `
+  m.innerHTML = photos.map((src, i) => `
     <figure class="mason-item">
       <div class="relative">
-        <img loading="lazy" src="${src}" alt="${cap}" />
+        <img loading="lazy" src="${src}" alt="" />
         <span class="tape" style="top:-10px; left:50%; transform: translateX(-50%) rotate(${(i*5)%9-4}deg);"></span>
       </div>
-      <figcaption class="hand text-[20px] text-shadow mt-2">${cap}</figcaption>
     </figure>
   `).join('');
 })();
 
-/* ===== Trailer play overlay ===== */
+/* ===== Organizer email — mailto + copy fallback + toast ===== */
+(function(){
+  const b = document.getElementById('organizerEmailBtn');
+  if(!b) return;
+  function toast(msg){
+    let t = document.getElementById('miniToast');
+    if(!t){
+      t = document.createElement('div');
+      t.id = 'miniToast';
+      t.style.cssText = 'position:fixed; left:50%; bottom:32px; transform:translateX(-50%) translateY(20px); background:var(--ink); color:var(--gold-hot); padding:14px 22px; border-radius:999px; border:1px solid rgba(201,162,76,.4); font-family:Manrope,sans-serif; font-size:13px; letter-spacing:.16em; text-transform:uppercase; z-index:120; opacity:0; transition:opacity .35s, transform .35s; box-shadow:0 18px 40px -10px rgba(0,0,0,.7);';
+      document.body.appendChild(t);
+    }
+    t.textContent = msg;
+    requestAnimationFrame(() => { t.style.opacity = '1'; t.style.transform = 'translateX(-50%) translateY(0)'; });
+    clearTimeout(t._h);
+    t._h = setTimeout(() => { t.style.opacity = '0'; t.style.transform = 'translateX(-50%) translateY(20px)'; }, 2600);
+  }
+  b.addEventListener('click', (e) => {
+    const email = b.dataset.email;
+    // Try copying so user always gets something useful
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(email).then(
+        () => toast('Email скопійовано · ' + email),
+        () => {}
+      );
+    }
+    // mailto: still fires naturally — if no mail client, the copied email is the fallback
+  });
+})();
+
+/* ===== Trailer: lazy-load (data-src → src when in viewport) + play overlay ===== */
 (function(){
   const v = document.getElementById('trailerVideo');
   const b = document.getElementById('playBtn');
-  if(!v || !b) return;
+  if(!v) return;
+
+  // Lazy-attach the source ~400px before the video enters the viewport,
+  // so when the user clicks play the file starts streaming instantly.
+  // preload="none" keeps the bytes off the wire until then.
+  function attachSrc(){
+    if(v.dataset.src){
+      v.src = v.dataset.src;
+      v.removeAttribute('data-src');
+    }
+  }
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if(e.isIntersecting){ attachSrc(); io.disconnect(); }
+      });
+    }, { rootMargin: '400px 0px' });
+    io.observe(v);
+  } else {
+    attachSrc(); // older browsers — just load it
+  }
+
+  if(!b) return;
   b.addEventListener('click', () => {
+    attachSrc(); // safety net if click happens before observer fires
     b.style.transition = 'opacity .4s ease';
     b.style.opacity = '0';
     v.play().catch(()=>{});
@@ -1719,14 +1666,22 @@ const QUOTES = [
 (function(){
   const v = document.getElementById('heroVideo');
   const b = document.getElementById('heroMute');
+  const lbl = document.getElementById('muteLabel');
   if(!v || !b) return;
   v.muted = true;
   function render(){
     b.querySelector('#muteIcon').innerHTML = v.muted
       ? '<path d="M4 9 H8 L13 4 V20 L8 15 H4 Z"/><path d="M17 9 L21 13 M21 9 L17 13" stroke="currentColor" stroke-width="1.8" fill="none"/>'
       : '<path d="M4 9 H8 L13 4 V20 L8 15 H4 Z"/><path d="M17 8 a5 5 0 0 1 0 8 M19 6 a8 8 0 0 1 0 12" stroke="currentColor" stroke-width="1.8" fill="none"/>';
+    if(lbl) lbl.textContent = v.muted ? 'Звук' : 'Без звуку';
+    b.setAttribute('aria-label', v.muted ? 'Увімкнути звук відео' : 'Вимкнути звук відео');
   }
-  b.addEventListener('click', () => { v.muted = !v.muted; if(!v.muted){ v.play().catch(()=>{}); } render(); });
+  b.addEventListener('click', () => {
+    v.muted = !v.muted;
+    if(!v.muted) v.play().catch(()=>{});
+    b.classList.remove('hero-mute-pulse');
+    render();
+  });
   render();
 })();
 
