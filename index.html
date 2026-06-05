@@ -7,6 +7,32 @@
 <meta name="description" content="Романтична музична комедія братів Капранових з живим звуком. Найближчий показ — 16 липня, Гідропарк, «Магічний Кораблик»." />
 <meta name="theme-color" content="#1A0F0A" />
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src='https://connect.facebook.net/en_US/fbevents.js';
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s);
+}(window, document,'script');
+
+fbq('init', '1611234536610233');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1611234536610233&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
 <!-- Favicons -->
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
@@ -27,7 +53,7 @@
   "startDate": "2026-07-16T19:00",
   "location": { "@type": "Place", "name": "Магічний Кораблик", "address": "Гідропарк, Київ, Україна" },
   "performer": { "@type": "PerformingGroup", "name": "музично-театральна формація «Територія Жінки»" },
-  "offers": { "@type": "Offer", "url": "https://secure.wayforpay.com/payment/sc8c15c8324ec", "price": "800-1200", "priceCurrency": "UAH" }
+  "offers": { "@type": "Offer", "url": "https://secure.wayforpay.com/payment/sc8c15c8324ec", "price": "700-1200", "priceCurrency": "UAH" }
 }
 </script>
 
@@ -110,9 +136,9 @@ body::before{
 /* === BUTTONS === */
 .btn{
   display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
-  padding: 16px 28px; border-radius:999px;
-  font-family:'Manrope',sans-serif; font-weight:700; font-size:13px;
-  letter-spacing:.16em; text-transform:uppercase;
+  padding: 16px 30px; border-radius:999px;
+  font-family:'Manrope',sans-serif; font-weight:800; font-size:15px;
+  letter-spacing:.14em; text-transform:uppercase;
   transition: transform .35s cubic-bezier(.2,.7,.2,1), background .25s ease, color .25s ease, box-shadow .35s ease, border-color .25s ease;
   min-height:48px; cursor:pointer; border:0;
   position:relative; overflow:hidden; isolation:isolate;
@@ -232,10 +258,10 @@ body::before{
   font-family:'Manrope',sans-serif;
 }
 .hero-cta-label{
-  font-weight:700; font-size:14px; letter-spacing:.18em; text-transform:uppercase; line-height:1;
+  font-weight:800; font-size:16px; letter-spacing:.14em; text-transform:uppercase; line-height:1;
 }
 .hero-cta-sub{
-  margin-top:4px; font-size:11px; letter-spacing:.14em; text-transform:uppercase; opacity:.72;
+  margin-top:4px; font-size:11px; letter-spacing:.14em; text-transform:uppercase; opacity:.78;
 }
 .hero-cta-arrow{
   font-size:18px; font-weight:700; transition: transform .35s cubic-bezier(.2,.7,.2,1); opacity:.7;
@@ -243,7 +269,7 @@ body::before{
 .hero-cta:hover .hero-cta-arrow{ transform: translateX(5px); opacity:1; }
 
 /* Primary — gold gradient, glow */
-.hero-cta-primary{ color: var(--ink); box-shadow: 0 14px 38px -10px rgba(232,184,80,.55), 0 0 0 1px rgba(232,184,80,.4) inset; }
+.hero-cta-primary{ color: var(--ink); box-shadow: 0 16px 44px -8px rgba(232,184,80,.8), 0 0 0 1.5px rgba(244,210,122,.7) inset; }
 .hero-cta-primary::before{
   background:
     radial-gradient(120% 140% at 0% 0%, #F8D77A 0%, #E8B850 35%, #C9A24C 75%, #A88234 100%);
@@ -276,8 +302,8 @@ body::before{
 /* on small screens — keep dense */
 @media (max-width: 640px){
   .hero-cta-inner{ padding: 12px 14px; min-height: 56px; gap: 12px; }
-  .hero-cta-label{ font-size: 12.5px; letter-spacing: .14em; }
-  .hero-cta-sub{ font-size: 10px; }
+  .hero-cta-label{ font-size: 14px; letter-spacing: .12em; }
+  .hero-cta-sub{ font-size: 10.5px; }
 }
 
 /* === REVEALS === */
@@ -387,8 +413,8 @@ body::before{
 .hero-veil{
   position:absolute; inset:0; z-index:1; pointer-events:none;
   background:
-    linear-gradient(180deg, rgba(10,5,3,.55) 0%, rgba(10,5,3,.05) 28%, rgba(10,5,3,.15) 60%, rgba(10,5,3,.92) 100%),
-    linear-gradient(90deg, rgba(10,5,3,.78) 0%, rgba(10,5,3,.35) 45%, rgba(10,5,3,.0) 75%);
+    linear-gradient(180deg, rgba(10,5,3,.66) 0%, rgba(10,5,3,.22) 28%, rgba(10,5,3,.4) 60%, rgba(10,5,3,.95) 100%),
+    linear-gradient(90deg, rgba(10,5,3,.9) 0%, rgba(10,5,3,.55) 42%, rgba(10,5,3,.12) 78%);
 }
 .hero-grain{
   position:absolute; inset:0; z-index:2; pointer-events:none; opacity:.22; mix-blend-mode:overlay;
@@ -424,7 +450,7 @@ body::before{
       rgba(255,255,255,.07) 30px 32px),
     radial-gradient(60% 100% at 50% 50%, var(--wine) 0%, var(--wine-deep) 60%, #2A0710 100%);
   box-shadow: inset 0 0 80px rgba(0,0,0,.5);
-  transition: transform 1.4s cubic-bezier(.85,.0,.15,1);
+  transition: transform 1.25s cubic-bezier(.85,.0,.15,1);
 }
 .curtain-l{ left:0; }
 .curtain-r{ right:0; }
@@ -546,7 +572,7 @@ body::before{
 }
 .polaroid{
   position:absolute; width: 240px; cursor: grab;
-  background: #F8EFD8; padding: 14px 14px 56px;
+  background: #F8EFD8; padding: 14px 14px 68px;
   box-shadow: 0 20px 40px -10px rgba(0,0,0,.5), 0 6px 12px rgba(0,0,0,.25);
   touch-action: none; user-select:none;
   transition: box-shadow .25s ease;
@@ -579,8 +605,8 @@ body::before{
   filter: sepia(.35) saturate(1.1) contrast(.95) brightness(.96);
 }
 .polaroid .caption{
-  position:absolute; bottom:14px; left:14px; right:14px;
-  font-family:'Caveat',cursive; font-size:24px; line-height:1; color:var(--ink-2);
+  position:absolute; bottom:16px; left:14px; right:14px;
+  font-family:'Caveat',cursive; font-weight:700; font-size:24px; line-height:1.05; color:var(--ink);
   text-align:center;
 }
 .polaroid .pin{
@@ -705,16 +731,6 @@ body::before{
   50%   { box-shadow: 0 14px 36px -6px rgba(232,184,80,.75), 0 0 0 12px rgba(232,184,80,0); }
 }
 .hero-mute-pulse{ animation: heroMutePulse 2.4s ease-in-out infinite; }
-
-/* sound button */
-.sound-btn{
-  position:fixed; left:24px; bottom:24px; z-index:70;
-  width:48px; height:48px; border-radius:50%;
-  background: rgba(26,15,10,.78); color:var(--gold-hot);
-  display:flex; align-items:center; justify-content:center;
-  border:1px solid rgba(201,162,76,.35);
-  backdrop-filter: blur(8px);
-}
 
 /* mobile menu — theatrical, modern, fully opaque */
 #mobileMenu{
@@ -909,7 +925,7 @@ html.reduce-anim .hero-dim{ display:none; }
         </div>
       </div>
 
-      <p class="display-italic max-w-[620px] text-[15px] sm:text-[17px] lg:text-[20px] text-cream/85 reveal reveal-up-3 mt-3 sm:mt-5 leading-snug" style="text-shadow: 0 2px 10px rgba(0,0,0,.6);">
+      <p class="display-italic max-w-[620px] text-[15px] sm:text-[17px] lg:text-[20px] text-cream reveal reveal-up-3 mt-3 sm:mt-5 leading-snug" style="text-shadow: 0 2px 14px rgba(0,0,0,.85), 0 1px 3px rgba(0,0,0,.9);">
         Романтична музична комедія братів Капранових — з кобзою, клавішами, кларнетом і голосом, який змінює правила гри.
       </p>
 
@@ -930,7 +946,7 @@ html.reduce-anim .hero-dim{ display:none; }
           </svg>
           <div class="text-left flex-1">
             <div class="hero-cta-label">Купити квитки</div>
-            <div class="hero-cta-sub">800 – 1200 ₴</div>
+            <div class="hero-cta-sub">700 – 1200 ₴</div>
           </div>
           <span class="hero-cta-arrow">→</span>
         </div>
@@ -1077,7 +1093,7 @@ html.reduce-anim .hero-dim{ display:none; }
             <div class="flex items-baseline justify-between gap-4">
               <div>
                 <div class="eyebrow text-wine">Ціна</div>
-                <div class="num text-[28px]">800–1200 ₴</div>
+                <div class="num text-[28px]">700–1200 ₴</div>
               </div>
               <a href="https://secure.wayforpay.com/payment/sc8c15c8324ec" target="_blank" rel="noopener" class="btn btn-wine" style="padding:12px 18px; min-height:38px; font-size:12px;">Купити →</a>
             </div>
@@ -1145,7 +1161,7 @@ html.reduce-anim .hero-dim{ display:none; }
         <div class="photo">
           <img src="assets/actors/2026-03-19_20-08-42_Mantach.webp" alt="Брат Капранов з кобзою" style="object-position: 50% 30%;" />
         </div>
-        <div class="caption">Брат Капранов<br/><span style="font-size:18px; opacity:.6">кобза · вірші</span></div>
+        <div class="caption">Брат Капранов<br/><span style="font-size:17px; opacity:.72">кобза · вірші</span></div>
       </div>
 
       <!-- Polaroid 2: Roman Kolyada -->
@@ -1154,7 +1170,7 @@ html.reduce-anim .hero-dim{ display:none; }
         <div class="photo">
           <img src="assets/actors/_V3A9872.webp" alt="Роман Коляда з клавішною гітарою" style="object-position: 50% 25%;" />
         </div>
-        <div class="caption">Роман Коляда<br/><span style="font-size:18px; opacity:.6">клавіши · кларнет · ударні</span></div>
+        <div class="caption">Роман Коляда<br/><span style="font-size:17px; opacity:.72">клавіши · кларнет · ударні</span></div>
       </div>
 
       <!-- Polaroid 3: Barbara Konon -->
@@ -1163,7 +1179,7 @@ html.reduce-anim .hero-dim{ display:none; }
         <div class="photo">
           <img src="assets/actors/_V3A9679.webp" alt="Барбара Конон на сцені" style="object-position: 50% 22%;" />
         </div>
-        <div class="caption">Барбара Конон<br/><span style="font-size:18px; opacity:.6">вокал · музика · вірші</span></div>
+        <div class="caption">Барбара Конон<br/><span style="font-size:17px; opacity:.72">вокал · музика · вірші</span></div>
       </div>
 
     </div>
@@ -1236,7 +1252,7 @@ html.reduce-anim .hero-dim{ display:none; }
 
   <div class="max-w-[1320px] mx-auto px-6 lg:px-10 relative">
     <div class="eyebrow text-gold-hot mb-6 reveal">Купити квитки</div>
-    <h2 class="display text-cream text-[64px] sm:text-[92px] lg:text-[140px] leading-[0.88] reveal reveal-up-1">
+    <h2 class="display text-cream leading-[0.9] reveal reveal-up-1" style="font-size: clamp(38px, 10.5vw, 140px);">
       Приходь.<br/>
       <span class="display-italic text-gold-hot">Посміємось разом.</span><br/>
       Зустрінемось.
@@ -1349,20 +1365,13 @@ html.reduce-anim .hero-dim{ display:none; }
   Квитки
 </a>
 
-<!-- ============== SOUND BUTTON ============== -->
-<button id="soundBtn" class="sound-btn" aria-label="Звук фону">
-  <svg id="soundIcon" viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6">
-    <path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 8a5 5 0 0 1 0 8" stroke-dasharray="2 3"/>
-  </svg>
-</button>
-
 <!-- ============== SCRIPTS ============== -->
 <script>
 /* ===== Curtain ===== */
 window.addEventListener('load', () => {
   const c = document.getElementById('curtain');
-  setTimeout(() => c.classList.add('open'), 800);
-  setTimeout(() => c.classList.remove('show'), 2400);
+  setTimeout(() => c.classList.add('open'), 250);
+  setTimeout(() => c.classList.remove('show'), 1600);
 });
 
 /* ===== Reveal on scroll ===== */
@@ -1642,6 +1651,7 @@ const QUOTES = [
     if(v.dataset.src){
       v.src = v.dataset.src;
       v.removeAttribute('data-src');
+      v.load(); // ensure the source is picked up on mobile before play()
     }
   }
   if('IntersectionObserver' in window){
@@ -1660,7 +1670,11 @@ const QUOTES = [
     attachSrc(); // safety net if click happens before observer fires
     b.style.transition = 'opacity .4s ease';
     b.style.opacity = '0';
-    v.play().catch(()=>{});
+    // On mobile the source often isn't decodable yet on the first tap —
+    // try now, and retry once the browser reports it can play.
+    const tryPlay = () => v.play().catch(()=>{});
+    tryPlay();
+    v.addEventListener('canplay', tryPlay, { once: true });
     setTimeout(() => { b.style.display = 'none'; }, 400);
   });
   v.addEventListener('pause', () => {
@@ -1691,16 +1705,15 @@ const QUOTES = [
   render();
 })();
 
-/* ===== Sound (placeholder mute toggle — no audio file loaded) ===== */
+/* ===== Meta Pixel — InitiateCheckout on ticket / checkout buttons ===== */
 (function(){
-  const b = document.getElementById('soundBtn');
-  let on = false;
-  b.addEventListener('click', () => {
-    on = !on;
-    b.style.color = on ? 'var(--gold-hot)' : 'rgba(245,232,208,.4)';
-    // No actual audio attached — placeholder
-  });
-  b.style.color = 'rgba(245,232,208,.4)';
+  // Fire when the user clicks any button that leads to the wayforpay checkout
+  // ("Купити квитки", "Квитки", ticket "Купити →", sticky CTA, etc.)
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href*="secure.wayforpay.com"]');
+    if(!a) return;
+    if(typeof fbq === 'function') fbq('track', 'InitiateCheckout');
+  }, true);
 })();
 </script>
 
