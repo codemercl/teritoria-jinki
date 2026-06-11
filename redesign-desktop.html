@@ -1035,6 +1035,7 @@ html.reduce-anim .hero-dim{ display:none; }
 <section id="top" class="hero" data-screen-label="01 Hero">
   <!-- background video -->
   <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="">
+    <source src="assets/hero.mp4" type="video/mp4" />
     <source src="assets/hero.webm" type="video/webm" />
   </video>
   <div class="hero-veil"></div>
@@ -1169,7 +1170,8 @@ html.reduce-anim .hero-dim{ display:none; }
       <video
         id="trailerVideo"
         class="absolute inset-0 w-full h-full object-cover bg-black"
-        data-src="assets/trailer.webm"
+        data-mp4="assets/trailer.mp4"
+        data-webm="assets/trailer.webm"
         preload="none"
         playsinline
         controls
@@ -1795,11 +1797,20 @@ const QUOTES = [
   // so when the user clicks play the file starts streaming instantly.
   // preload="none" keeps the bytes off the wire until then.
   function attachSrc(){
-    if(v.dataset.src){
-      v.src = v.dataset.src;
-      v.removeAttribute('data-src');
-      v.load(); // ensure the source is picked up on mobile before play()
+    if(v.dataset.loaded) return;
+    v.dataset.loaded = '1';
+    // mp4 first so iOS/Safari (which can't decode webm) gets a playable source
+    if(v.dataset.mp4){
+      const s = document.createElement('source');
+      s.src = v.dataset.mp4; s.type = 'video/mp4';
+      v.appendChild(s);
     }
+    if(v.dataset.webm){
+      const s = document.createElement('source');
+      s.src = v.dataset.webm; s.type = 'video/webm';
+      v.appendChild(s);
+    }
+    v.load(); // ensure the source is picked up on mobile before play()
   }
   if('IntersectionObserver' in window){
     const io = new IntersectionObserver((entries) => {
