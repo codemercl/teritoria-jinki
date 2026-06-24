@@ -41,18 +41,44 @@ src="https://www.facebook.com/tr?id=1611234536610233&ev=PageView&noscript=1"/>
 </noscript>
 <!-- End Meta Pixel Code -->
 
-<!-- ===== CONVERSION EVENT (fires once on this thank-you page) ===== -->
+<!-- ===== CONVERSION EVENT (one landing on this thank-you page = one Purchase) ===== -->
 <script>
 (function () {
-  // Try to read amount / order info if WayForPay appended them to the URL.
   var p = new URLSearchParams(window.location.search);
-  var value = parseFloat(p.get('amount') || p.get('value') || '') || undefined;
-  var orderId = p.get('orderReference') || p.get('order') || undefined;
 
-  // Push into the GTM dataLayer — create a "purchase" trigger in GTM on this event.
+  // Use the real paid amount ONLY if WayForPay / your redirect actually appended it.
+  // Never fake a 0 — Meta treats value:0 as a genuine 0-UAH sale and breaks ROAS.
+  var amount = parseFloat(p.get('amount') || '');
+  var value = (isFinite(amount) && amount > 0) ? amount : undefined;
+
+  // Order reference if the gateway passed one; otherwise mint a stable id for this landing.
+  var orderId = p.get('orderReference') || undefined;
+  var hasRealOrder = !!orderId;
+  if (!orderId) {
+    // No id from WayForPay — keep one id per browser session so a refresh / back
+    // does not count the same arrival twice. New session/visitor = new id = new purchase.
+    orderId = sessionStorage.getItem('wfp_order_id');
+    if (!orderId) {
+      orderId = (window.crypto && crypto.randomUUID)
+        ? crypto.randomUUID()
+        : 'wfp_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+      sessionStorage.setItem('wfp_order_id', orderId);
+    }
+  }
+
+  // De-duplicate: fire this purchase exactly once.
+  // Real order id -> localStorage (dedupe forever). Generated id -> sessionStorage (per visit).
+  var store = hasRealOrder ? window.localStorage : window.sessionStorage;
+  var firedKey = 'wfp_purchase_fired_' + orderId;
+  if (store.getItem(firedKey)) return;
+  store.setItem(firedKey, '1');
+
+  // GA4 / GTM purchase event. transaction_id lets GA4 dedupe; clear ecommerce first.
   window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ ecommerce: null });
   window.dataLayer.push({
     event: 'purchase',
+    event_id: orderId,
     ecommerce: {
       currency: 'UAH',
       value: value,
@@ -61,9 +87,12 @@ src="https://www.facebook.com/tr?id=1611234536610233&ev=PageView&noscript=1"/>
     }
   });
 
-  // Fire Meta Pixel Purchase as a fallback (in case it is not managed via GTM).
+  // Meta Pixel Purchase. eventID = orderId so any GTM-managed Purchase is de-duplicated,
+  // not double-counted. value is omitted entirely when unknown (never sent as 0).
   if (typeof fbq === 'function') {
-    fbq('track', 'Purchase', { currency: 'UAH', value: value || 0 });
+    var data = { currency: 'UAH' };
+    if (value !== undefined) data.value = value;
+    fbq('track', 'Purchase', data, { eventID: orderId });
   }
 })();
 </script>

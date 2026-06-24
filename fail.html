@@ -41,19 +41,27 @@ src="https://www.facebook.com/tr?id=1611234536610233&ev=PageView&noscript=1"/>
 </noscript>
 <!-- End Meta Pixel Code -->
 
-<!-- ===== EVENT (fires once on this failed-payment page) ===== -->
+<!-- ===== EVENT (one landing on this failed-payment page = one payment_failed) ===== -->
 <script>
 (function () {
   var p = new URLSearchParams(window.location.search);
-  var orderId = p.get('orderReference') || p.get('order') || undefined;
-  var reason  = p.get('reason') || p.get('reasonCode') || undefined;
+  var orderId    = p.get('orderReference') || undefined;
+  var reasonCode = p.get('reasonCode') || undefined;   // stable numeric code (preferred for analytics)
+  var reasonText = p.get('reason') || undefined;       // human-readable text
+
+  // De-duplicate so a refresh / retry-back does not inflate failure counts.
+  var key = 'wfp_failed_' + (orderId || sessionStorage.getItem('wfp_order_id') || 'na');
+  if (sessionStorage.getItem(key)) return;
+  sessionStorage.setItem(key, '1');
 
   // Push into the GTM dataLayer — create a "payment_failed" trigger in GTM on this event.
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     event: 'payment_failed',
+    event_id: orderId,
     transaction_id: orderId,
-    fail_reason: reason
+    fail_reason_code: reasonCode,
+    fail_reason: reasonText
   });
 })();
 </script>
